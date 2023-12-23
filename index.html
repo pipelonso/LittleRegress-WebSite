@@ -13,10 +13,17 @@
 <body>
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
     <script src="resources/JS/index.js"></script>
-    <div class="navbar" style="position:sticky; top:0px; z-index: 999999; height: 60px; border-bottom: solid; border-color: black; border-width: 1px; background-image: url('resources/Images/Schema/table.jpg'); background-size: cover;">
     
+    <div id="navcontent" class="navbar justify-content-center" style="position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url('resources/Images/Schema/pink-purple\ rect.svg'); background-size: cover;">
+        <a href="#" class="nav-item link-dark mx-3">HOME</a>
+        <a href="pages/discord.html" class="nav-item link-dark mx-3">DISCORD</a>
+        <a href="pages/downloads.html" class="mx-3 link-dark">DOWNLOADS</a>
+        <a href="pages/investigation.html" class="mx-3 link-dark">INVESTIGATIONS</a>
+        <a href="pages/about.html" class="mx-3 link-dark">ABOUT</a>
     </div>
-    <div class="navbar">
+
+
+    <div id="startermsg" class="navbar">
         
         <div class="nav-item col-12 col-sm-12 col-md-2 col-lg-3"></div>
         <div class="p-2 titlebox nav-item col-12 col-sm-12 col-md-8 col-lg-6">
@@ -91,7 +98,7 @@
                     </p>
                 </div>
                 
-                <button class="w-100">PROCEED</button>
+                <button class="w-100" onclick="hidestartermsg();">PROCEED</button>
 
 
             </div>
