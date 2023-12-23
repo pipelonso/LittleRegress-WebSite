@@ -1,0 +1,89 @@
+body{
+
+    background-color: rgb(255, 255, 255);
+    background-image: url("../Images/Schema/moon\ pattern.svg");
+    background-size: cover;
+    
+
+}
+
+.titlebox{
+
+    background-image: url("../Images/Schema/pink-purple\ rect.svg");
+    background-size: cover;
+    border-radius: 10px;
+    border : solid;
+    border-width: 1px;
+    border-color: black;
+    color : black;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+
+}
+
+select{
+
+    border:none;
+    border-bottom: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(54, 54, 54, 0.068);
+    color : rgb(0, 0, 0);
+
+}
+
+select:hover{
+
+    color:rgb(51, 51, 51);
+
+}
+
+p{
+
+    font-family: 'Single Day', cursive;
+    font-size: large;
+}
+
+h1{
+
+    font-family: 'Single Day', cursive;
+
+}
+
+button{
+
+    border:none;
+    border : solid;
+    border-radius: 4px;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgba(54, 54, 54, 0.068);
+    color : black;
+
+}
+
+button:hover{
+
+    animation: btn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes btn {
+
+    0% {
+
+        background-color: rgba(54, 54, 54, 0.068);
+        color : black;
+
+    }100%{
+
+        background-color: rgba(0, 0, 0, 0.747);
+        color : white;
+    }
+
+
+}
