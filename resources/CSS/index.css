@@ -87,3 +87,19 @@ button:hover{
 
 
 }
+
+a{
+
+    font-family: 'Single Day', cursive;
+    font-size: large;
+    color : black;
+
+}
+
+
+a:hover {
+
+    color : gray;
+
+
+}

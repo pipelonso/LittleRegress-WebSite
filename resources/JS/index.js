@@ -9,7 +9,13 @@ document.addEventListener("focus" , function(){
 
 })
 
+function hidestartermsg() {
 
+    var startermsg = document.getElementById("startermsg");
+    startermsg.style.display = "none";
+
+
+}
 
 function startermsgLang(lang) {
 
