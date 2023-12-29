@@ -1,0 +1,38 @@
+.abcontainers{
+    
+    border : solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgba(0, 0, 0, 0.411);
+
+}
+
+.abcontainers:hover {
+
+    position: relative;
+    animation: contanim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes contanim{
+
+    0%{
+
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.411);
+        border-color: black;
+
+    }100%{
+
+        top: -5px;
+        background-color: rgba(48, 107, 107, 0.411);
+        border-color: rgb(194, 169, 169);
+
+    }
+
+
+}
