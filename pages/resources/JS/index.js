@@ -1,19 +1,24 @@
 
+var contentpage = document.getElementById('contentPage'); 
 
-document.addEventListener("focus" , function(){
-
+document.addEventListener("DOMContentLoaded" , function(){
+    
+    console.log("loaded");
     var estext = document.getElementById("esPresentacion");
     estext.style.display = "none";
     var lgSelector = document.getElementById('lgSelector');
     lgSelector.value = "en";
-
+   
+    contentpage.style.display = "none";
 })
+
+
 
 function hidestartermsg() {
 
     var startermsg = document.getElementById("startermsg");
     startermsg.style.display = "none";
-
+    contentpage.style.display = "block";
 
 }
 
@@ -37,5 +42,4 @@ function startermsgLang(lang) {
 
 
 }
-
 
