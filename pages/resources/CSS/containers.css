@@ -43,3 +43,18 @@
     transition: opacity 0.5s ease-in-out;
 
 }
+.bcontainer{
+
+    padding: 10px;
+    border : solid;
+    border-width: 1px;
+    border-color: black;
+
+}
+
+.cont2{
+
+    background-image: url("../Images/Schema/cont_2.svg");
+    background-size: cover;
+
+}
