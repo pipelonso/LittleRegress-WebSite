@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="AVThinks Circular.svg"
+   inkscape:export-filename="AVThinks Circular.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.35590942"
+     inkscape:cx="384.9294"
+     inkscape:cy="556.32132"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3147">
+      <stop
+         style="stop-color:#c9f3cd;stop-opacity:1;"
+         offset="0"
+         id="stop3143" />
+      <stop
+         style="stop-color:#ebeabf;stop-opacity:1;"
+         offset="1"
+         id="stop3145" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient925">
+      <stop
+         style="stop-color:#f1cccb;stop-opacity:1;"
+         offset="0"
+         id="stop921" />
+      <stop
+         style="stop-color:#6d73de;stop-opacity:1;"
+         offset="1"
+         id="stop923" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient925"
+       id="linearGradient927"
+       x1="40.476105"
+       y1="45.031494"
+       x2="236.19751"
+       y2="226.91115"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3147"
+       id="linearGradient3149"
+       x1="62.424042"
+       y1="221.49979"
+       x2="220.00095"
+       y2="52.167625"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient927);fill-opacity:1;stroke-width:5.3;stroke-linejoin:round"
+       id="rect234"
+       width="264.58334"
+       height="264.58334"
+       x="0"
+       y="0"
+       ry="0" />
+    <rect
+       style="fill:url(#linearGradient3149);stroke:#a9a9a9;stroke-width:1.53005;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       id="rect976"
+       width="264.58337"
+       height="264.58337"
+       x="3.5527137e-15"
+       y="3.5527137e-15"
+       ry="132.29169" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:198.846px;font-family:'Architects Daughter';-inkscape-font-specification:'Architects Daughter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#bf5555;fill-opacity:1;stroke-width:30.7555;stroke-linejoin:round"
+       x="9.8710117"
+       y="170.61092"
+       id="text1758"><tspan
+         sodipodi:role="line"
+         id="tspan1756"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:198.846px;font-family:'Architects Daughter';-inkscape-font-specification:'Architects Daughter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#bf5555;fill-opacity:1;stroke-width:30.7555"
+         x="9.8710117"
+         y="170.61092">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:198.846px;font-family:'Architects Daughter';-inkscape-font-specification:'Architects Daughter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4666a1;fill-opacity:1;stroke-width:5.3;stroke-linejoin:round"
+       x="131.75919"
+       y="148.90146"
+       id="text2384"
+       transform="rotate(7.6707936)"><tspan
+         sodipodi:role="line"
+         id="tspan2382"
+         style="fill:#4666a1;fill-opacity:1;stroke-width:5.3"
+         x="131.75919"
+         y="148.90146">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.1969px;font-family:'Architects Daughter';-inkscape-font-specification:'Architects Daughter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#474747;fill-opacity:1;stroke:#a9a9a9;stroke-width:0.303227;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="80.531898"
+       y="214.73038"
+       id="text3255"><tspan
+         sodipodi:role="line"
+         id="tspan3253"
+         style="stroke-width:0.303227;fill:#474747;fill-opacity:1"
+         x="80.531898"
+         y="214.73038">thinks</tspan></text>
+  </g>
+</svg>
