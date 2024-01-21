@@ -7,6 +7,15 @@ body{
 
 }
 
+.imgdef{
+
+    border:solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+
+}
+
 .titlebox{
 
     background-image: url("../Images/Schema/pink-purple\ rect.svg");
