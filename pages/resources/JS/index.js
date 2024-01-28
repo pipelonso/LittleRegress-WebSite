@@ -1,12 +1,13 @@
 
 var vm = new Vue({
     el:'#app',
-    data() {
-        return {
-            lang: navigator.language.substring(0,2),
+    data: {
+        
+            languaje: navigator.language.substring(0,2),
+            lang : '',
             startmsglang : '',
             startmsgshow : true
-        };
+        
     },
     methods: {
         hidestartermsg : function() {
@@ -18,9 +19,12 @@ var vm = new Vue({
         }
     },
     mounted() {
-
-        console.log('kboom');
-
+        var languaje = navigator.language.substring(0,2);
+        if (languaje == 'es') {
+            this.lang = 'es';
+        }else{
+            this.lang = 'en';
+        }
     }
 });
 

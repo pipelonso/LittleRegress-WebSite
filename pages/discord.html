@@ -10,30 +10,37 @@
     <link rel="stylesheet" href="resources/CSS/index.css">
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/CSS/containers.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
 
-    <div id="navcontent" class="navbar justify-content-center" style="position:sticky; top:0px; z-index: 999999; border-bottom: solid; border-color: black; border-width: 1px; background-image: url('resources/Images/Schema/pink-purple\ rect.svg'); background-size: cover;">
-        <a href="../index.html" class="nav-item link-dark mx-3">HOME</a>
-        <a href="discord.html" class="nav-item link-dark mx-3">DISCORD</a>
-        <a href="downloads.html" class="mx-3 link-dark">DOWNLOADS</a>
-        <a href="investigation.html" class="mx-3 link-dark">INVESTIGATIONS</a>
-        <a href="about.html" class="mx-3 link-dark">ABOUT</a>
-    </div>
-    <div class="navbar px-2">
-        <div class="nav-item col-12 col-sm-12 col-md-4 col-lg-4"></div>
-        <div class="nav-item col-12 col-sm-12 col-md-4 col-lg-4 p-2 abcontainers" >
-            <p class="text-center" style="font-size: 40px;">JOIN TO OUR DISCORD SERVER</p>
-            <a href="https://discord.gg/5EfgM9xzYr">
-                <img src="resources/Images/icons/Discord.svg" alt="ds_icon" class="w-100">
-                <button class="w-100">JOIN DISCORD SERVER</button>
-            </a>
+    <div id="app">
+        <navcomponent page="discord"></navcomponent>
+        
+        <div class="navbar px-2">
+            <div class="nav-item col-12 col-sm-12 col-md-4 col-lg-4"></div>
+            <div class="nav-item col-12 col-sm-12 col-md-4 col-lg-4 p-2 abcontainers" >
+                <template v-if="lang == 'en'">
+                    <p class="text-center" style="font-size: 40px;">JOIN TO OUR DISCORD SERVER</p>    
+                </template>
+                <template v-if="lang == 'es'">
+                    <p class="text-center" style="font-size: 40px;">UNETE A NUESTRO SERVIDOR DE DISCORD</p>    
+                </template>
+                <a href="https://discord.gg/5EfgM9xzYr">
+                    <img src="resources/Images/icons/Discord.svg" alt="ds_icon" class="w-100">
+                    <template v-if="lang == 'en'">
+                        <button class="w-100">JOIN DISCORD SERVER</button>
+                    </template>
+                    <template v-if="lang == 'es'">
+                        <button class="w-100">UNIRSE AL SERVIDOR DE DISCORD</button>
+                    </template>
+                </a>
+            </div>
+            <div class="nav-item col-12 col-sm-12 col-md-4 col-lg-4"></div>
         </div>
-        <div class="nav-item col-12 col-sm-12 col-md-4 col-lg-4"></div>
     </div>
-    
-
-
+    <script src="resources/vue_components/navbar.js"></script>
+    <script src="resources/JS/discord.js"></script>
 </body>
 </html>

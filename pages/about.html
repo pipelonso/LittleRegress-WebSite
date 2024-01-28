@@ -9,24 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/CSS/index.css">
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
 
-    <div id="navcontent" class="navbar justify-content-center" style="position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url('resources/Images/Schema/pink-purple\ rect.svg'); background-size: cover;">
-        <a href="../index.html" class="nav-item link-dark mx-3">HOME</a>
-        <a href="discord.html" class="nav-item link-dark mx-3">DISCORD</a>
-        <a href="downloads.html" class="mx-3 link-dark">DOWNLOADS</a>
-        <a href="investigation.html" class="mx-3 link-dark">INVESTIGATIONS</a>
-        <a href="about.html" class="mx-3 link-dark">ABOUT</a>
+    <div id="app">
+        <navcomponent page="about"></navcomponent>
+        
+
+        <div>
+
+
+        </div>
     </div>
-
-    <div>
-
-
-    </div>
-
-
-
+    <script src="resources/vue_components/navbar.js"></script>
+    <script src="resources/JS/about.js"></script>
 </body>
 </html>

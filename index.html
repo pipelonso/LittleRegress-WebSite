@@ -14,15 +14,13 @@
 </head>
 <body>
     
+    
+
     <div id="app">
 
-        <div id="navcontent" class="navbar justify-content-center" style="position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url('pages/resources/Images/Schema/pink-purple\ rect.svg'); background-size: cover;">
-            <a href="#" class="nav-item link-dark mx-3">HOME</a>
-            <a href="pages/discord.html" class="nav-item link-dark mx-3">DISCORD</a>
-            <a href="pages/downloads.html" class="mx-3 link-dark">DOWNLOADS</a>
-            <a href="pages/investigation.html" class="mx-3 link-dark">INVESTIGATIONS</a>
-            <a href="pages/about.html" class="mx-3 link-dark">ABOUT</a>
-        </div>
+        <navcomponent page="index"></navcomponent>
+
+        
 
         <div class="p-2">
             <div v-if="startmsgshow == true"  id="startermsg" class="navbar">
@@ -30,9 +28,21 @@
             <div class="nav-item col-12 col-sm-12 col-md-2 col-lg-3"></div>
             <div class="p-2 titlebox nav-item col-12 col-sm-12 col-md-8 col-lg-6">
                 <h1 class="text-center">LittleRegress DL</h1>
-                <p class="text-center" id="infoStart">Before you proceed please read this</p>
+                <div v-if="lang == 'en'">                    
+                    <p class="text-center" id="infoStart">Before you proceed please read this</p>
+                </div>
+                <div v-if="lang == 'es'">                    
+                    <p class="text-center" id="infoStart">Porfavor lee esto antes de continuar</p>
+                </div>
                 <div class="navbar justify-content-center">
-                    <p class="nav-item mx-2">Read in</p>
+
+                    <template v-if="lang == 'en'">
+                            <p class="nav-item mx-2">Read in</p>        
+                    </template>
+                    <template v-if="lang == 'es'">
+                        <p class="nav-item mx-2">Leer en</p>        
+                    </template>
+                    
                     <select class="nav-item " style="position: relative; top: -10px;" id="lgSelector">
                         <option value="es">Spanish</option>
                         <option value="en">English</option>
@@ -72,7 +82,7 @@
                         <p>Yo solo me encargare de hacer el lado seguro de todo, sin embargo aplicando de igual manera elementos que mejoren la seguridad del datapack ante diferentes tipos de publico.</p>
                         <p>Quizas en un futuro, si es que no existe ya, pueda hacer un apartado especial para mostrar todo lo que he averiguado y mostrar todo el trabajo que hay detras del desarrollo de LittleRegress</p>
                     </div>
-                    <div v-if="lang == 'en'" id="enPresentation">
+                    <div v-if="lang == 'en' " id="enPresentation">
                         <p >
                             Hello, let me introduce myself. My name is Pipe, and I am the lead developer of the LittleRegress datapack for Minecraft Java. This pack adds a set of elements that contribute to a better role-playing experience as a baby and caregiver within Minecraft. It is dedicated to the ABDL, DL, AB, TB, and TBDL communities, seeking acceptance from anyone regardless of their gender, skin color, place of origin, or culture.
                         </p>
@@ -244,12 +254,12 @@
                     <div class=" bcontainer cont2 p-2 rounded-3">
                         <div v-if="lang == 'es'" id="esparagrahp">
                             <p class="text-center">LittleRegress en un datapack para minecraft que añade el rol de bebé y cuidador a tu experiencia de minecraft, teniendo en cuenta la seguridad del usuario en un entorno de un solo jugador y multijugador, explorando experiencias aptas para la terapia de regresion, uso por la comunidad ABDL y todas sus variantes, ademas de ser de codigo abierto y totalmente modificable por el usuario.</p>
-                            <p class="text-center">El datapack actualmente ofrece la posibilidad de tener el rol de bebé  y usar elementos creados especificamente para ese rol, como lo son los pañales, ropa, cuna, cambiador, bañera, inodoro, chupon de bebe, silla de bebe y demas.</p>
+                            <p class="text-center">El datapack actualmente usar elementos creados como lo son los pañales, ropa, cuna, cambiador, bañera, inodoro, chupon de bebe, silla de bebe y demas.</p>
                             <p class="text-danger text-center">El datapack se encuentra en desarrollo por lo que el contenido puede cambiar.</p>
                         </div>
                         <div v-if="lang == 'en'" id="enparagrahp">
                             <p class="text-center">LittleRegress is a datapack for Minecraft that adds the baby and caregiver roles to your Minecraft experience, taking into account user safety in both single-player and multiplayer environments. It explores experiences suitable for regression therapy, catering to the ABDL (Adult Baby Diaper Lover) community and all its variants. Additionally, it is open-source and fully customizable by the user.</p>
-                            <p class="text-center">The current datapack provides the opportunity to take on the role of a baby and use items specifically created for that role, such as diapers, clothing, crib, changing table, bathtub, toilet, baby pacifier, baby chair, and more.</p>
+                            <p class="text-center">The current datapack provides the opportunity use items specifically created such as diapers, clothing, crib, changing table, bathtub, toilet, baby pacifier, baby chair, and more.</p>
                             <p class="text-danger text-center">Please note that the datapack is still in development, so the content may undergo changes.</p>
                         </div>
             
@@ -287,10 +297,17 @@
                     </div>
                 </div>
 
+                
                 <hr>
 
                 <div id="crafting" class="container">
-                    <h1 class="text-center">RECIPES</h1>
+                    <div v-if="lang == 'en'">
+                        <h1 class="text-center">RECIPES</h1>
+                    </div>
+
+                    <div v-if="lang == 'es'">
+                        <h1 class="text-center">RECETAS</h1>
+                    </div>
 
                     <div class="abcontainers p-2 my-2">
                         <h4 class="text-center">Nappy</h4>                        
@@ -400,8 +417,9 @@
 
     </div>    
     
-    
+    <script src="pages/resources/vue_components/navbar.js"></script>
     <script src="pages/resources/bootstrap/js/bootstrap.min.js"></script>
     <script src="pages/resources/JS/index.js"></script>
+    
 </body>
 </html>
