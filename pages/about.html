@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="resources/CSS/index.css">
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="resources/CSS/containers.css">
 </head>
 <body>
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
@@ -17,10 +18,24 @@
     <div id="app">
         <navcomponent page="about"></navcomponent>
         
-
         <div>
+            <div class="p-2">
+                <div v-if="lang == 'es'" class="bcontainer p-2"  >
+                    <h1 class="text-center">LITTLE REGRESS</h1>
+                    <p class="text-center">Little Regress es un proyecto codigo abierto que espera extenderse a diferentes plataformas y videojuegos trayendo en ellas una experiencia de usuario que facilite la regresión de edad y creacion de contenido para la comunidad ABDL DL TBDL y demas, buscando respetar la seguridad de los usuarios y respetar su sanidad mental cuidando cada implementación que se haga y haciendola pasar por un filtro especial que mejore su desarrollo dia con dia con lo que las plataformas en las que realizamos el contenido lo permiten.</p>
+                    <p class="text-center">El codigo de todo lo que se desarrolle basado en este proyecto siempre sera de codigo abierto bajo la licencia  <a href="https://github.com/pipelonso/LittleRegress/blob/main/LICENSE">GENERAL PUBLIC LICENSE</a> , lo que significa que todo el contenido creado a base de este proyecto tambien tendra que ser de codigo abierto si se convierte en un proyecto aparte.</p>
+                    <p class="text-center">Ademas de ser de codigo abierto y que cada usuario puede programar lo que se considere apropiado para la comunidad en generar, en caso de no saber crear modificaciones o datapacks el usuario puede contribuir con sugenrencias de contenido en el servidor oficial de discord, esto se hace hace para que el proyecto no se concentre en una sola persona sino que mas personas puedan contribuir para crear el datapack de este tipo de contenido mas completo y mejor desarrollado hasta la fecha.</p>
+                    <p class="text-center">En caso del contenido proporcionado por el usuario no se apropiado, el usuario puede decidir crear un proyecto aparte basado en el datapack, obteniendo todas las caracteristicas del datapack hasta el momento y ajuntando la caracteristica proporcionada por el usuario de forma separada al desarrollo del datapack en general, de esta forma hacer que un usuario tambien pueda crear modificaciones al mismo contendo del datapack o contenido general en caso de considerarse necesario.</p>
+                </div>
+                <div v-if="lang == 'en'" class="bcontainer p-2"  >
+                    <h1 class="text-center">LITTLE REGRESS</h1>
+                    <p class="text-center">Little Regress is an open-source project that aims to expand to different platforms and video games, providing a user experience that facilitates age regression and content creation for the ABDL, DL, TBDL, and other communities. The project aims to respect the safety and mental well-being of users by carefully implementing and filtering each feature. This process is intended to improve development day by day, in accordance with the policies of the platforms where the content is created.</p>
+                    <p class="text-center">The code for everything developed based on this project will always be open-source under the <a href="https://github.com/pipelonso/LittleRegress/blob/main/LICENSE">GENERAL PUBLIC LICENSE</a>, which means that all content created based on this project must also be open-source if it becomes a separate project.</p>
+                    <p class="text-center">In addition to being open-source, and allowing each user to program what is deemed appropriate for the community in general, in the event that a user is unable to create modifications or datapacks, they can contribute content suggestions on the official Discord server. This is done to ensure that the project does not rely on a single person, but rather, more individuals can contribute to make the datapack for this type of content more comprehensive and better developed to date.</p>
+                    <p class="text-center">If the content provided by the user is not deemed appropriate, the user has the option to create a separate project based on the datapack. They can incorporate all the features of the datapack up to that point and integrate the user-provided feature separately into the overall development of the datapack. This allows users to create modifications to the content of the datapack or general content if deemed necessary.</p>
+                </div>
 
-
+            </div>
         </div>
     </div>
     <script src="resources/vue_components/navbar.js"></script>
