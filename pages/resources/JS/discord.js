@@ -7,6 +7,8 @@ var vm = new Vue({
         };
     },
     methods: {
+    
+
         
     },
     mounted() {
