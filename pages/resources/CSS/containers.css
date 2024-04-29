@@ -59,3 +59,14 @@
     background-size: cover;
 
 }
+
+.foxDiscord{
+
+    background-image: url(../Images/Chars/Discord/base.svg);
+    background-size: unset;
+
+}
+
+.foxDiscord:hover{
+    background-image: url(../Images/Chars/Discord/hover.svg);    
+}
