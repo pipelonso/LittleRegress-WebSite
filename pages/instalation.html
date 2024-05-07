@@ -41,8 +41,27 @@
                 <hr>
 
                 <template v-if="lang == 'es'">
-                    
-                    
+                    <ol>
+                        <li>Oprime la combinación de teclas <strong>Windows + R</strong> </li>
+                        <li>Se abrira la una ventana llamada ejecutar donde tienes que escribir <strong>%appdata%</strong> y dale a aceptar.</li>
+                        <li>Se abrira el explorador de archivos y tienes que entrar en la carpeta .minecraft.</li>
+                        <li>Dentro de .minecraft entras a la carpeta <strong>saves</strong>  y abres la carpeta del mundo donde quieres instalar el datapack.</li>
+                        <li>Abres la carpeta datapacks del mundo donde deseas instalar el datapack.</li>
+                        <li>Dentro de la carpeta datapacks mueves el archivo el zip del datapack y abres el mundo.</li>
+                        <li>Disfruta.</li>
+                    </ol>
+                </template>
+
+                <template v-if="lang == 'en'">
+                    <ol>
+                        <li>Press the <strong>Windows + R</strong> key combination.</li>
+                        <li>A window called Run will open, where you need to type <strong>%appdata%</strong> and click OK.</li>
+                        <li>The file explorer will open, and you need to navigate to the .minecraft folder.</li>
+                        <li>Inside .minecraft, enter the <strong>saves</strong> folder and open the folder of the world where you want to install the datapack.</li>
+                        <li>Open the datapacks folder of the world where you want to install the datapack.</li>
+                        <li>Inside the datapacks folder, move the datapack zip file and open the world.</li>
+                        <li>Enjoy.</li>
+                    </ol>
                 </template>
 
             </div>
@@ -58,9 +77,26 @@
                 <hr>
 
                 <template v-if="lang == 'es'">
-                    
-                    
+                    <ol>
+                        <li>Ve a la carpeta de tu usuario y has visibles los archivos ocultos, en algunos gestores de archivos se pueden ocultar o mostrar con la combinación <strong>Ctrol + h</strong>  </li>
+                        <li>Entra a la carpeta llamada .minecraft</li>
+                        <li>Dentro de .minecraft entras a la carpeta <strong>saves</strong>  y abres la carpeta del mundo donde quieres instalar el datapack.</li>
+                        <li>Abres la carpeta datapacks del mundo donde deseas instalar el datapack.</li>
+                        <li>Dentro de la carpeta datapacks mueves el archivo el zip del datapack y abres el mundo.</li>
+                        <li>Disfruta.</li>
+                    </ol>                    
                 </template>
+                <template v-if="lang == 'en'">
+                    <ol>
+                        <li>Go to your user folder and make hidden files visible. In some file managers, you can hide or show them with the <strong>Ctrl + h</strong> combination.</li>
+                        <li>Enter the folder called .minecraft.</li>
+                        <li>Inside .minecraft, enter the <strong>saves</strong> folder and open the folder of the world where you want to install the datapack.</li>
+                        <li>Open the datapacks folder of the world where you want to install the datapack.</li>
+                        <li>Inside the datapacks folder, move the datapack zip file and open the world.</li>
+                        <li>Enjoy.</li>
+                    </ol>
+                </template>
+
 
             </div>
 
