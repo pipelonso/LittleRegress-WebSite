@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datapack Instalation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/CSS/index.css">
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="resources/CSS/containers.css">
+</head>
+<body>
+    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+    <div id="app">
+        <navcomponent page="about"></navcomponent>
+
+        <h1 class="text-center"> {{ lang == "es"?"INSTRUCCIONES DE INSTALACIÒN":"INSTALL INSTRUCTIONS" }} </h1>
+
+        <div class="cont2">
+            <template v-if="lang == 'es'">
+                <p class=" text-center">Para lograr la correcta instalación del datapack puedes seguir los siguientes pasos:</p>
+            </template>
+            <template v-if="lang == 'en'">
+                <p class=" text-center">To achieve the correct installation of the datapack you can follow the following steps:</p>
+            </template>
+        </div>
+        <div class="p-2">
+            <div class="basicdark p-2 my-2">
+                <div class="navbar justify-content-start">
+                    <div class="nav-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-microsoft" viewBox="0 0 24 24">
+                            <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z"/>
+                          </svg>
+                    </div>
+                    <h4 class="nav-item mx-2">{{ lang == "es"?"PLATAFORMA WINDOWS":"WINDOWS PLATFORM"}} </h4>
+                </div>
+                
+                <hr>
+
+                <template v-if="lang == 'es'">
+                    
+                    
+                </template>
+
+            </div>
+
+            <div class="basicdark p-2 my-2">
+                <div class="navbar justify-content-start">
+                    <div class="nav-item">
+                        <img style="height: 24px;" src="resources/Images/icons/linux-svgrepo-com.svg" alt="lnx">
+                    </div>
+                    <h4 class="nav-item mx-2">{{ lang == "es"?"PLATAFORMA LINUX":"LINUX PLATFORM"}} </h4>
+                </div>
+
+                <hr>
+
+                <template v-if="lang == 'es'">
+                    
+                    
+                </template>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="resources/vue_components/navbar.js"></script>
+    <script src="resources/JS/instalation.js"></script>
+</body>
+</html>

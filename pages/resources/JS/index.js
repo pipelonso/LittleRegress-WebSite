@@ -6,7 +6,7 @@ var vm = new Vue({
             languaje: navigator.language.substring(0,2),
             lang : '',
             startmsglang : '',
-            startmsgshow : true
+            startmsgshow : false
         
     },
     methods: {
@@ -15,7 +15,7 @@ var vm = new Vue({
         },
         startermsgLang : function() {
             var lg = document.getElementById('lgSelector').value;
-            console.log(lg);
+            this.lang = lg
         }
     },
     mounted() {
