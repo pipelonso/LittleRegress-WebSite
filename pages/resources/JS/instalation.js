@@ -6,12 +6,9 @@ var vm = new Vue({
         };
     },
     methods: {
-        startermsgLang : function() {
-            var lg = document.getElementById('lgSelector').value;
-            this.lang = lg
-        }
+        
     },
     mounted() {
-
+        
     }
 });

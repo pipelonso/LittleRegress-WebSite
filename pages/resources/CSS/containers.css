@@ -3,8 +3,9 @@
     border : solid;
     border-color: black;
     border-width: 1px;
-    background-color: rgba(0, 0, 0, 0.411);
+    background-color: rgba(0, 0, 0, 0.718);
     border-radius: 5px;
+    color : white;
 
 }
 
@@ -14,9 +15,18 @@
     animation: contanim;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    color : black;
 
 }
 
+.basicdark {
+    border : solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgba(0, 0, 0, 0.718);
+    border-radius: 5px;
+    color : white;
+}
 
 
 @keyframes contanim{

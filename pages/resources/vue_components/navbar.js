@@ -9,13 +9,15 @@ Vue.component('navcomponent' , {
             pageDiscord: '#',
             pageDownloads: '#',
             pageInvestigations: '#',
+            pageInstalation: '#',
             styles: 'position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url("resources/Images/Schema/pink-purple_rect.svg"); background-size: cover;',
             names : {
                 index : 'HOME',
                 discord : 'DISCORD',
                 downloads : 'DOWNLOADS',
                 investigations : 'INVESTIGATIONS',
-                about : 'ABOUT'
+                about : 'ABOUT',
+                installation: 'INSTALLATION'
             }
         };
     },
@@ -26,6 +28,7 @@ Vue.component('navcomponent' , {
             this.pageDiscord = 'pages/discord.html';
             this.pageInvestigations = 'pages/investigation.html';
             this.pageDownloads = 'pages/downloads.html';
+            this.pageInstalation = 'pages/instalation.html';
             this.styles = 'position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url("pages/resources/Images/Schema/pink-purple_rect.svg"); background-size: cover;';
         }else{
             this.pageIndex = '../index.html';
@@ -33,6 +36,7 @@ Vue.component('navcomponent' , {
             this.pageDiscord = 'discord.html';
             this.pageInvestigations = 'investigation.html';
             this.pageDownloads = 'downloads.html';
+            this.pageInstalation = 'instalation.html';
             this.styles = 'position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url("resources/Images/Schema/pink-purple_rect.svg"); background-size: cover;';
         }   
 
@@ -49,7 +53,8 @@ Vue.component('navcomponent' , {
                 discord : 'DISCORD',
                 downloads : 'DESCARGAS',
                 investigations : 'INVESTIGACIONES',
-                about : 'ACERCA DE'
+                about : 'ACERCA DE',
+                installation : 'INSTALACIÓN'
             }
         }else{
             this.names = {
@@ -57,7 +62,8 @@ Vue.component('navcomponent' , {
                 discord : 'DISCORD',
                 downloads : 'DOWNLOADS',
                 investigations : 'INVESTIGATIONS',
-                about : 'ABOUT'
+                about : 'ABOUT',
+                installation : 'INSTALATION'
             }
         }
 
@@ -71,6 +77,7 @@ Vue.component('navcomponent' , {
             <a v-bind:href="pageDiscord" class="nav-item link-dark mx-3">{{ names.discord }}</a>
             <a v-bind:href="pageDownloads" class="mx-3 link-dark">{{ names.downloads }}</a>
             <a v-bind:href="pageInvestigations" class="mx-3 link-dark">{{ names.investigations }}</a>
+            <a v-bind:href="pageInstalation" class="mx-3 link-dark">{{ names.installation }}</a>
             <a v-bind:href="pageAbout" class="mx-3 link-dark">{{ names.about }}</a>
         </div>
     `

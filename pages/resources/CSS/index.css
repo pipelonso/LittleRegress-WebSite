@@ -50,13 +50,19 @@ select:hover{
 
 p{
 
-    font-family: 'Single Day', cursive;
+    font-family: "Saira Extra Condensed", sans-serif;
     font-size: large;
 }
 
 h1{
 
-    font-family: 'Single Day', cursive;
+    font-family: "Saira Extra Condensed", sans-serif;
+
+}
+
+h4 {
+
+    font-family: "Saira Extra Condensed", sans-serif;
 
 }
 
@@ -99,7 +105,7 @@ button:hover{
 
 a{
 
-    font-family: 'Single Day', cursive;
+    font-family: "Saira Extra Condensed", sans-serif;
     font-size: large;
     color : black;
 
