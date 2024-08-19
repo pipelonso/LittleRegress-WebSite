@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="resources/CSS/index.css">
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="resources/CSS/containers.css">
 </head>
 <body>
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
@@ -18,8 +19,20 @@
 
         <navcomponent page="investigation"></navcomponent>
        
-        <div>
-            
+        <div class="p-2">
+            <div>
+                <div v-if="lang == 'en'" class="cont2 p-2 rounded-2" >
+                    <h1 class="text-center">INVESTIGATIONS</h1>
+                </div>
+                <div v-if="lang == 'es'" class="cont2 p-2 rounded-2" >
+                    <h1 class="text-center">INVESTIGACIONES</h1>
+                </div>
+            </div>
+            <div>
+                
+
+
+            </div>
         </div>
     </div>
     

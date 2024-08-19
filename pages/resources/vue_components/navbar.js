@@ -30,7 +30,17 @@ Vue.component('navcomponent' , {
             this.pageDownloads = 'pages/downloads.html';
             this.pageInstalation = 'pages/instalation.html';
             this.styles = 'position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url("pages/resources/Images/Schema/pink-purple_rect.svg"); background-size: cover;';
-        }else{
+        } 
+        else if (this.page == 'article'){
+            this.pageIndex = '../../index.html';
+            this.pageAbout = '../about.html';
+            this.pageDiscord = '../discord.html';
+            this.pageInvestigations = '../investigation.html';
+            this.pageDownloads = '../downloads.html';
+            this.pageInstalation = '../instalation.html';
+            this.styles = 'position:sticky; top:0px; z-index: 999999;  border-bottom: solid; border-color: black; border-width: 1px; background-image: url("../resources/Images/Schema/pink-purple_rect.svg"); background-size: cover;';
+        }
+        else{
             this.pageIndex = '../index.html';
             this.pageAbout = 'about.html';
             this.pageDiscord = 'discord.html';
@@ -76,7 +86,6 @@ Vue.component('navcomponent' , {
             <a v-bind:href="pageIndex" class="nav-item link-dark mx-3">{{ names.index }}</a>
             <a v-bind:href="pageDiscord" class="nav-item link-dark mx-3">{{ names.discord }}</a>
             <a v-bind:href="pageDownloads" class="mx-3 link-dark">{{ names.downloads }}</a>
-            <a v-bind:href="pageInvestigations" class="mx-3 link-dark">{{ names.investigations }}</a>
             <a v-bind:href="pageInstalation" class="mx-3 link-dark">{{ names.installation }}</a>
             <a v-bind:href="pageAbout" class="mx-3 link-dark">{{ names.about }}</a>
         </div>
