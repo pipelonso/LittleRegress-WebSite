@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Little Regress</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="pages/resources/tailwindcss/tailwind.js"></script>
+    <script src="pages/resources/vue2/vue_2.js"></script>
+</head>
+
+<body class="bg-blue-100">
+
+    <style>
+        .saira {
+            font-family: "Saira Extra Condensed", sans-serif;
+        }
+
+        .clouds-frame {
+            background-image: url(pages/resources/Images/svg/clouds.svg);
+        }
+    </style>
+
+    <div id="app">
+        <div class="h-[150px]">
+            <div class="clouds-frame bg-cover h-[150px] w-full absolute"></div>
+            <div class="absolute w-full">
+                <top-bar :lang="lang"></top-bar>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="bg-slate-300 rounded-md p-2 saira text-gray-700 border-t-slate-400 border-t-2">
+                <div>
+                    <p class="text-center text-lg">¡LittleRegress es una experiencia ABDL traida al universo de
+                        Minecraft!</p>
+                    <p class="text-center">¿Por donde quieres empezar?</p>
+                </div>
+                <div class="text-white flex flex-wrap gap-2 justify-between w-full p-2">
+                    <div class="p-2 h-[100px] w-full sm:w-full md:w-[49%] bg-slate-600 rounded-lg">
+                        <p class="text-center">LITTLEREGRESS LEGACY</p>
+                    </div>
+                    <div class="p-2 h-[100px]  w-full md:w-[49%] bg-slate-600 rounded-lg">
+                        <p class="text-center">LITTLEREGRESS REBIRTH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="pages/resources/komponent/komponent.js"></script>
+
+    <script>
+
+        comp = new Komponent()
+
+        async function loadComponents() {
+
+            await comp.registerComponent('./pages/pkComponents/top_bar.khtml', 'navbar')
+
+            Vue.component('top-bar', {
+                props: ['lang'],
+                template: comp.getContent('navbar').text
+            })
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    language: navigator.language.substring(0, 2),
+                    lang: '',
+                    navbarContent: ''
+                },
+                methods: {
+
+                },
+                mounted() {
+
+                    var languaje = navigator.language.substring(0, 2);
+                    if (languaje == 'es') {
+                        this.lang = 'es';
+                    } else {
+                        this.lang = 'en';
+                    }
+
+                }
+
+            });
+
+        }
+
+        loadComponents()
+
+    </script>
+
+</body>
+
+</html>

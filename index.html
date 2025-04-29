@@ -19,7 +19,6 @@
 
         <navcomponent page="index"></navcomponent>
 
-        
         <div id="contentPage" class="transpop">
             
 
@@ -345,9 +344,19 @@
 
     </div>    
     
+    <script>
+
+        document.addEventListener('loadstart', function() {
+            console.log('dsadasdas');
+            
+            window.location.href = './newIndex.html'
+        })
+
+    </script>
+
     <script src="pages/resources/vue_components/navbar.js"></script>
     <script src="pages/resources/bootstrap/js/bootstrap.min.js"></script>
     <script src="pages/resources/JS/index.js"></script>
-    
+
 </body>
 </html>
