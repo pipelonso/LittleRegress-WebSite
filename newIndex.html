@@ -17,6 +17,7 @@
 <body class="bg-blue-100">
 
     <style>
+
         .saira {
             font-family: "Saira Extra Condensed", sans-serif;
         }
@@ -24,36 +25,212 @@
         .clouds-frame {
             background-image: url(pages/resources/Images/svg/clouds.svg);
         }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
     </style>
 
-    <div id="app">
-        <div class="h-[150px]">
-            <div class="clouds-frame bg-cover h-[150px] w-full absolute"></div>
-            <div class="absolute w-full">
-                <top-bar :lang="lang"></top-bar>
-            </div>
-        </div>
-        <div class="p-2">
-            <div class="bg-slate-300 rounded-md p-2 saira text-gray-700 border-t-slate-400 border-t-2">
-                <div>
-                    <p class="text-center text-lg">¡LittleRegress es una experiencia ABDL traida al universo de
-                        Minecraft!</p>
-                    <p class="text-center">¿Por donde quieres empezar?</p>
-                </div>
-                <div class="text-white flex flex-wrap gap-2 justify-between w-full p-2">
-                    <div class="p-2 h-[100px] w-full sm:w-full md:w-[49%] bg-slate-600 rounded-lg">
-                        <p class="text-center">LITTLEREGRESS LEGACY</p>
-                    </div>
-                    <div class="p-2 h-[100px]  w-full md:w-[49%] bg-slate-600 rounded-lg">
-                        <p class="text-center">LITTLEREGRESS REBIRTH</p>
-                    </div>
+    <main class="flex-1">
+        <div id="app">
+            <div class="h-[150px]">
+                <div class="clouds-frame bg-cover h-[150px] w-full absolute"></div>
+                <div class="absolute w-full">
+                    <top-bar :lang="lang"></top-bar>
                 </div>
             </div>
+            <div class="p-2">
+                <div class="bg-slate-300 rounded-md p-2 saira text-gray-700 border-t-slate-400 border-t-2">
+                    <div>
+                        <p class="text-center text-lg">¡LittleRegress es una experiencia ABDL traida al universo de
+                            Minecraft!</p>
+                        <p class="text-center">¿Por donde quieres empezar?</p>
+                    </div>
+                    <div class="text-white flex flex-wrap gap-2 justify-between w-full p-2">
+                        <div class="p-2 h-[100px] w-full sm:w-full md:w-[49%] bg-slate-600 rounded-lg bg-cover bg-center"
+                            style="background-image: url('pages/resources/Images/mc_screenshots/Default\ Cot.png');">
+                            <div class="backdrop-blur-sm rounded-md">
+                                <p class="text-center">LITTLEREGRESS LEGACY</p>
+                            </div>
+                            <div class="relative top-[35px] w-full">
+                                <button class="
+                                bg-white text-gray-600 rounded-md 
+                                w-full hover:bg-gray-300
+                                transition-colors duration-200
+                                " @click="lrSelection = 'legacy'">
+                                    Explorar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-2 h-[100px]  w-full md:w-[49%] bg-slate-600 rounded-lg bg-cover bg-center"
+                            style="background-image: url('pages/resources/Images/mc_screenshots/LR2_nappies.png');">
+                            <div class="backdrop-blur-sm rounded-md">
+                                <p class="text-center">LITTLEREGRESS REBIRTH</p>
+                            </div>
+                            <div class="relative top-[35px] w-full">
+                                <button class="
+                                bg-white text-gray-600 rounded-md 
+                                w-full hover:bg-gray-300
+                                transition-colors duration-200
+                                " @click="lrSelection = 'rebirth'">
+                                    Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-if="lrSelection === 'legacy'">
+                <div class="p-2 saira">
+                    <!-- Legacy description -->
+                    <div class="p-2 bg-slate-300 rounded-md">
+                        <div class="flex justify-between bg-slate-100 p-2 rounded-md">
+                            <div v-if="lang == 'es'">
+                                <h1 class="text-lg">Ultima versión</h1>
+                            </div>
+                            <div v-if="lang == 'en'">
+                                <h1 class="text-lg">Latest version</h1>
+                            </div>
+                            <div>
+                                <h1 class="text-lg">1.20.4</h1>
+                            </div>
+                        </div>
+                        <div v-if="lang == 'es'">
+                            <p>
+                                LittleRegress Legacy es la primera experiencia ABDL desarrollada por el equipo
+                                LitleRegress
+                                dentro de minecraft.
+                                Esta versión quedó detenida en el tiempo debido a problemas de portabilidad para la
+                                version
+                                1.20.5 de minecraft java, sin embargo, esta versión aun tiene mucho potencial para
+                                explorar
+                                y revivir tu bebe interior dentro de minecraft.
+                            </p>
+                            <p>
+                                Nuestro desarrollador bebe snuggle, decidió tomar la delantera y dar lo mejor de si
+                                mismo
+                                para crear esta versión, ya que el desarrollo que trae este datapack es de alta
+                                complejidad
+                                tecnica
+                                en donde se rompieron las barreras de lo que no se pensaba posible hacer usando
+                                datapacks.
+                            </p>
+                        </div>
+                        <div v-if="lang == 'en'">
+                            <p>
+                                LittleRegress Legacy is the first ABDL experience developed by the LittleRegress team
+                                within
+                                Minecraft.
+                                This version was frozen in time due to portability issues with Minecraft Java Edition
+                                1.20.5.
+                                However, it still holds great potential for exploration and for reconnecting with your
+                                inner
+                                baby within the Minecraft universe.
+                            </p>
+                            <p>
+                                Our baby developer Snuggle took the lead and gave his best to create this version,
+                                as the development behind this datapack involves a high level of technical complexity,
+                                breaking boundaries of what was once thought impossible using datapacks alone.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Legacy content -->
+                    <div class="my-2 p-2 bg-slate-300 rounded-md">
+                        <div class="bg-slate-100 p-2 rounded-md">
+                            <div v-if="lang == 'es'">
+                                <h1 class="text-lg">Contenido</h1>
+                            </div>
+                            <div v-if="lang == 'en'">
+                                <h1 class="text-lg">Content</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <details>
+                                <summary v-if="lang == 'es'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Muebles
+                                </summary>
+                                <summary v-if="lang == 'en'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Furniture
+                                </summary>
+                                <div class="bg-white rounded-md p-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">
+                                            Cuna
+                                        </summary>
+                                        <summary v-if="lang == 'en'">
+                                            Cot / Crib
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Cot.png" alt="cot"
+                                                class="w-full rounded-md">
+                                            <p v-if="lang == 'es'">La cuna es uno de los principales elementos, puedes
+                                                pasar
+                                                la noche, y para usarla tienes que saltar sobre ella.</p>
+                                            <p v-if="lang == 'en'">The crib is one of the main elements, you can spend
+                                                the
+                                                night in it, and to use it you have to jump on it.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/cot.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">
+                                            Cambiador
+                                        </summary>
+                                        <summary v-if="lang == 'en'">
+                                            Baby changing table
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Changer.png"
+                                                alt="changing table" class="rounded-md w-full">
+                                            <p v-if="lang == 'es'">El cambiador es un mueble para dar ambientación, el
+                                                cual
+                                                puede ser usado perfectamente dentro de la habitación de un bebe
+                                                travieso.
+                                            </p>
+                                            <p v-if="lang == 'en'">The changing table is a piece of furniture that
+                                                creates
+                                                atmosphere and can be perfectly used in a naughty baby's room.
+                                            </p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/changer.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-    </div>
+    <footer class="bg-slate-800 h-[200px]">
 
-
+    </footer>
 
     <script src="pages/resources/komponent/komponent.js"></script>
 
@@ -75,7 +252,8 @@
                 data: {
                     language: navigator.language.substring(0, 2),
                     lang: '',
-                    navbarContent: ''
+                    navbarContent: '',
+                    lrSelection: null
                 },
                 methods: {
 

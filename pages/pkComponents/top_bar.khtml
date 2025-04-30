@@ -8,8 +8,8 @@
             <h1 class="text-red-500 saira text-lg">
                 LittleRegress
             </h1>
-            <div class="flex gap-2 saira text-gray-700">
-                <div>
+            <div class="flex gap-2 saira text-gray-700 ">
+                <div class="hover:text-pink-500">
                     <div v-if="lang == 'es'">
                         <a href="">Inicio</a>
                     </div>
@@ -18,7 +18,7 @@
                     </div>
                     <div class="h-[2px] bg-blue-300 w-[50%]"></div>
                 </div>
-                <div>
+                <div class="hover:text-pink-500">
                     <div v-if="lang == 'es'">
                         <a href="">Conocenos</a>
                     </div>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="h-[2px] bg-red-300 w-[50%]"></div>
                 </div>
-                <div>
+                <div class="hover:text-pink-500">
                     <div v-if="lang == 'es'">
                         <a href="">Descargas</a>
                     </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="h-[2px] bg-yellow-300 w-[50%]"></div>
                 </div>
-                <div>
+                <div class="hover:text-pink-500">
                     <div v-if="lang == 'es'">
                         <a href="">Desarrollo</a>
                     </div>
