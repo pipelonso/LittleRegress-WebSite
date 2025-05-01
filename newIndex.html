@@ -219,8 +219,273 @@
                                         </div>
                                     </details>
                                 </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Bacinica de entrenamiento</summary>
+                                        <summary v-if="lang == 'en'">training potty</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Default_trainner.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Usada normalmente cuando un bebe esta aprendiendo a ir al baño, dentro del datapack puedes usarla para no tener "accidentes".</p>
+                                            <p v-if="lang == 'en'">Typically used when a baby is potty training, you can use it inside the datapack to avoid "accidents.".</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/training.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Inodoro</summary>
+                                        <summary v-if="lang == 'en'">Bathroom tax</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Bath.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Usada por adultos o niños grandes, suele ser la mejor opción cuando tienes ganas de ir al baño.</p>
+                                            <p v-if="lang == 'en'">Used by adults or older children, it's often the best option when you have to go to the bathroom.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/bath.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Silla para bebes</summary>
+                                        <summary v-if="lang == 'en'">Baby Chair</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Chair.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Puedes subirte en ella para sentarte junto a tu cuidador, solo es un elemento decorativo, pero se ve bonito.</p>
+                                            <p v-if="lang == 'en'">You can climb on it to sit next to your caregiver, it's just a decorative element, but it looks nice.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/chair.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Armario</summary>
+                                        <summary v-if="lang == 'en'">Cupboard</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Closset_2.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Es un mueble con pañales, es solo decorativo.</p>
+                                            <p v-if="lang == 'en'">It's a piece of furniture with diapers, it's just decorative.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/closset.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
                             </details>
+                            <details>
+                                <summary v-if="lang == 'es'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Accesorios
+                                </summary>
+                                <summary v-if="lang == 'en'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Accesories
+                                </summary>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Chupete
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Pacifier
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Default paci.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">El chupete dentro del datapack tiene una mecanica especial, es que ayuda a reducir el miedo del jugador a las creaturas ostiles, puedes usarlo por la noche para que tu jugador corra menos riesgo de tener un "accidente".</p>
+                                            <p v-if="lang == 'en'">The pacifier inside the datapack has a special mechanic, which is that it helps reduce the player's fear of hostile creatures. You can use it at night so that your player runs less risk of having an "accident."</p>
+                                        </div>
+                                        <div class="bg-blue-100 rounded-md p-2">
+                                            <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                            <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                            <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                <img src="pages/resources/Images/craftings/Paci.png"
+                                                    alt="cot_crafting">
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Pañal
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Diaper
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Default nappy.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">
+                                                El pañal es uno de los mejores items del datapack, ya que puedes usarlo para evitar ensuciar el suelo o tus pantalones, puedes mojar el pañal o ensuciarlo.
+                                            </p>
+                                            <p v-if="lang == 'en'">
+                                                The diaper is one of the best items in the datapack, as you can use it to avoid dirtying the floor or your pants, you can wet the diaper or dirty it.
+                                            </p>
+                                        </div>
+                                        <div class="bg-blue-100 rounded-md p-2">
+                                            <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                            <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                            <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                <img src="pages/resources/Images/craftings/nappy.png"
+                                                    alt="cot_crafting">
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                            <details>
+                                <summary v-if="lang == 'es'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Mecanicas
+                                </summary>
+                                <summary v-if="lang == 'en'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Mechanics
+                                </summary>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Sistema de ida al baño
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Potty system
+                                        </summary>
+                                        <div>
+                                            <div v-if="lang == 'es'">
+                                                <p>
+                                                    Dependiendo de las acciones que realices dentro del datapack, tu personaje empezará a sentir ganas de ir al baño.  
+                                                    Verás una barrita encima del inventario que mostrará su necesidad.  
+                                                    Cuando esta llegue al máximo... ¡ups! El jugador no aguantará más y tendrá un accidente.
+                                                </p>
+                                                <div class="bg-white rounded-md p-2">
+                                                    <p>
+                                                        Si lleva puesto un pañal, este se mojará o se ensuciará según lo que haya pasado.
+                                                    </p>
+                                                    <p>
+                                                        Si no lleva nada puesto, hará una acción especial para mostrar si se hizo pipí o popó.
+                                                    </p>
+                                                    <p>
+                                                        Cuando el jugador se hace popó, aparecerá un ítem en el suelo (no se puede recoger)  
+                                                        que simula ser caquita de forma muy sencilla y nada gráfica. Este desaparecerá al poco tiempo.
+                                                    </p>
+                                                    <p>
+                                                        Si se hace pipí, se generará un charquito en el suelo usando un modelo 3D.  
+                                                        Ese charquito se queda por un tiempo... ¡y curiosamente puede recogerse!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div v-if="lang == 'en'">
+                                                <p>
+                                                    Depending on the actions you perform inside the datapack, your character will start feeling the need to go potty.  
+                                                    A little bar will appear above the inventory showing their need.  
+                                                    When it reaches the top... uh-oh! The player won’t be able to hold it anymore and will have an accident.
+                                                </p>
+                                                <div class="bg-white rounded-md p-2">
+                                                    <p>
+                                                        If they’re wearing a diaper, it will get wet or messy depending on what happened.
+                                                    </p>
+                                                    <p>
+                                                        If they’re not wearing anything, a special action will play to show if they had a wee-wee or a poopy accident.
+                                                    </p>
+                                                    <p>
+                                                        When the player messes themselves, a non-collectible item will appear on the ground,  
+                                                        simulating poop in a very simple and non-graphic way. It will disappear after a short while.
+                                                    </p>
+                                                    <p>
+                                                        When the player wets themselves, a 3D puddle model will be placed on the ground.  
+                                                        The puddle will remain for a bit... and curiously, it can be picked up!
+                                                    </p>
+                                                </div>
+                                            </div>
 
+                                            <p v-if="lang == 'en'">The pacifier inside the datapack has a special mechanic, which is that it helps reduce the player's fear of hostile creatures. You can use it at night so that your player runs less risk of having an "accident."</p>
+                                        </div>
+                    
+                                    </details>
+                                </div>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Editor
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Editor
+                                        </summary>
+                                        <div>
+                                            <div v-if="lang == 'es'">
+                                                <p>
+                                                    Cuando haces aparecer uno de los muebles del datapack, este se generará en su posición por defecto.  
+                                                    Pero si quieres moverlo a otro lugar o girarlo, ¡puedes activar el modo editor siguiendo estos pasitos!
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Consigue una campanita 🔔</li>
+                                                        <li class="p-2">• Tócala tres veces rápido, como si jugaras con ella ✨</li>
+                                                        <li class="p-2">• Se abrirá un menú mágico que te dejará activar el modo editor 🛠️</li>
+                                                    </ol>
+                                                </div>
+                                                <p>
+                                                    Una vez que el modo editor esté activo, verás una partícula azul brillante sobre cada mueble.  
+                                                    Eso significa que puedes interactuar con ellos. Aquí te explico cómo:
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Acércate al mueble que quieres mover 🚶‍♂️</li>
+                                                        <li class="p-2">• Agáchate (sneak) y quédate así unos segundos ⏳</li>
+                                                        <li class="p-2">• Aparecerá un mensajito en el chat donde el editor te pedirá elegir qué deseas mover 🗨️</li>
+                                                        <li class="p-2">• Luego te preguntará si quieres moverlo o rotarlo 🔄</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div v-if="lang == 'en'">
+                                                <p>
+                                                    When you place a piece of furniture from the datapack, it will appear in its default position.  
+                                                    But if you'd like to move or rotate it, you can enter edit mode by following these simple steps!
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Get a little bell 🔔</li>
+                                                        <li class="p-2">• Ring it three times quickly, like you're playing with it ✨</li>
+                                                        <li class="p-2">• A magical menu will pop up and let you activate edit mode 🛠️</li>
+                                                    </ol>
+                                                </div>
+                                                <p>
+                                                    Once edit mode is active, all furniture pieces will show a cute blue particle on top.  
+                                                    That means they're ready to be edited! Here's how to interact with them:
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Walk up to the furniture you want to move 🚶‍♂️</li>
+                                                        <li class="p-2">• Sneak (crouch) and hold for a few seconds ⏳</li>
+                                                        <li class="p-2">• A little message will appear in the chat asking what you want to adjust 🗨️</li>
+                                                        <li class="p-2">• Then, it will ask if you'd like to move or rotate it 🔄</li>
+                                                    </ol>
+                                                </div>
+                                            </div>                                                                                     
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>

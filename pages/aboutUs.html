@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LittleRegress :: About us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="resources/tailwindcss/tailwind.js"></script>
+    <script src="resources/vue2/vue_2.js"></script>
+</head>
+<body class="bg-pink-100">
+    
+    <style>
+
+        .saira {
+            font-family: "Saira Extra Condensed", sans-serif;
+        }
+
+        .clouds-frame {
+            background-image: url(resources/Images/svg/clouds.svg);
+        }
+
+    </style>
+
+    <main>
+        <div id="app">
+            <div class="h-[150px]">
+                <div class="clouds-frame bg-cover h-[150px] w-full absolute"></div>
+                <div class="absolute w-full">
+                    <top-bar :lang="lang"></top-bar>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-center">
+                    <img src="resources/Images/svg/Snuggle_danny_dev_LR.svg" alt="" srcset="">
+                </div>
+                <section class="py-10 px-4 rounded-2xl">
+                    <h2 v-if="lang == 'es'" class="text-3xl font-bold text-center mb-8"> Sobre el equipo</h2>
+                    <h2 v-if="lang == 'en'" class="text-3xl font-bold text-center mb-8"> About the team</h2>
+                  
+                    <div class="flex flex-wrap justify-center gap-6">
+                      <!-- Snuggle -->
+                      <div class="bg-white rounded-2xl shadow-md p-6 max-w-sm w-full">
+
+                        <h3 class="text-xl font-bold mb-2">🦊 Snuggle</h3>
+                  
+                        <p v-if="lang == 'es'" class="text-gray-700">
+                          Snuggle es un zorrito curioso y juguetón que se encarga de programar todo el datapack.
+                          Es muy detallista y le gusta que todo funcione como debe ser, aunque a veces se distrae...
+                          ¡y puede tener pequeños accidentes! 🍼
+                        </p>
+                        <p v-if="lang == 'en'" class="text-gray-700">
+                          Snuggle is a curious and playful little fox who handles all the datapack programming.
+                          He loves when things work just right, although sometimes he gets distracted...
+                          and might have little accidents! 🍼
+                        </p>
+                      </div>
+                  
+                      <!-- Danni -->
+                      <div class="bg-white rounded-2xl shadow-md p-6 max-w-sm w-full">
+                        <h3 class="text-xl font-bold mb-2">🐰 Danni</h3>
+                        <p v-if="lang == 'es'" class="text-gray-700">
+                          Danni es un conejito zorrillo que actúa como el tester del datapack. Es muy curioso, le encanta explorar los muebles,
+                          encontrar errores y darle ideas nuevas a Snuggle. Siempre está listo con su pañalito para cualquier aventura. 🧷
+                        </p>
+                        <p v-if="lang == 'en'" class="text-gray-700">
+                          Danni is a bunny-skunk who plays the role of tester for the datapack. He’s curious and loves to explore furniture,
+                          find bugs, and give Snuggle new ideas. He's always ready with his diaper for any adventure. 🧷
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                  
+            </div>
+
+        </div>
+    </main>
+
+    <script src="resources/komponent/komponent.js"></script>
+
+    <script>
+
+        comp = new Komponent()
+
+        async function loadComponents() {
+
+            await comp.registerComponent('./pkComponents/top_bar.khtml', 'navbar')
+
+            Vue.component('top-bar', {
+                props: ['lang'],
+                template: comp.getContent('navbar').text
+            })
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    language: navigator.language.substring(0, 2),
+                    lang: '',
+                    navbarContent: '',
+                    lrSelection: null
+                },
+                methods: {
+
+                },
+                mounted() {
+
+                    var languaje = navigator.language.substring(0, 2);
+                    if (languaje == 'es') {
+                        this.lang = 'es';
+                    } else {
+                        this.lang = 'en';
+                    }
+
+                }
+
+            });
+
+        }
+
+        loadComponents()
+
+    </script>
+
+</body>
+</html>
