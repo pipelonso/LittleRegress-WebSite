@@ -1,0 +1,51 @@
+<div class="top_bar p-2 flex justify-center">
+    <div class="
+    top_bar_inside w-[100%] sm:w-[100%] md:w-[75%] 
+    lg:w-[50%] bg-pink-200 border-solid border-pink-300 p-2 border-[1px]
+    rounded-sm
+    ">
+        <div class="flex justify-between">
+            <h1 class="text-red-500 saira text-lg">
+                LittleRegress
+            </h1>
+            <div class="flex gap-2 saira text-gray-700 ">
+                <div class="hover:text-pink-500">
+                    <div v-if="lang == 'es'">
+                        <a :href="topBarUrls.index">Inicio</a>
+                    </div>
+                    <div v-else>
+                        <a :href="topBarUrls.index">Start</a>
+                    </div>
+                    <div class="h-[2px] bg-blue-300 w-[50%]"></div>
+                </div>
+                <div class="hover:text-pink-500">
+                    <div v-if="lang == 'es'">
+                        <a :href="topBarUrls.aboutUs">Conocenos</a>
+                    </div>
+                    <div v-else>
+                        <a :href="topBarUrls.aboutUs">Meet us</a>
+                    </div>
+                    <div class="h-[2px] bg-red-300 w-[50%]"></div>
+                </div>
+                <div class="hover:text-pink-500">
+                    <div v-if="lang == 'es'">
+                        <a href="">Descargas</a>
+                    </div>
+                    <div v-else>
+                        <a href="">Downloads</a>
+                    </div>
+                    <div class="h-[2px] bg-yellow-300 w-[50%]"></div>
+                </div>
+                <div class="hover:text-pink-500">
+                    <div v-if="lang == 'es'">
+                        <a href="">Desarrollo</a>
+                    </div>
+                    <div v-else>
+                        <a href="">Devtools</a>
+                    </div>
+                    <div class="h-[2px] bg-purple-300 w-[50%]"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

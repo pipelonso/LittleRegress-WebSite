@@ -1,353 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="mErzyX6rje7ZVZhOKB9Ao9c33OnbBQ0WQkBDmsxbpNE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LittleRegress START</title>
-    <link rel="stylesheet" href="pages/resources/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="pages/resources/CSS/index.css">
+    <title>New Little Regress</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="pages/resources/CSS/containers.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="pages/resources/tailwindcss/tailwind.js"></script>
+    <script src="pages/resources/vue2/vue_2.js"></script>
 </head>
-<body>
-    
-    <div id="app">
 
-        <navcomponent page="index"></navcomponent>
+<body class="bg-blue-100">
 
-        
-        <div id="contentPage" class="transpop">
-            
+    <style>
 
-                <div style="background-image: url('pages/resources/Images/Schema/stars-changing-colors.gif'); background-size: cover; height: 100px; border: none; border-bottom: double; border-color: black;">
-                    <h1 class="text-center w-100" style="position: relative; top:20px;">LITTLEREGRESS</h1>
+        .saira {
+            font-family: "Saira Extra Condensed", sans-serif;
+        }
+
+        .clouds-frame {
+            background-image: url(pages/resources/Images/svg/clouds.svg);
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+
+    <main class="flex-1">
+        <div id="app">
+            <div class="h-[150px]">
+                <div class="clouds-frame bg-cover h-[150px] w-full absolute"></div>
+                <div class="absolute w-full">
+                    <top-bar :lang="lang"></top-bar>
                 </div>
-
-                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="0"
-                            class="active"
-                            aria-current="true"
-                            aria-label="First slide"
-                        ></li>
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="1"
-                            aria-label="Second slide"
-                        ></li>
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="2"
-                            aria-label="Tercero"
-                        ></li>
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="3"
-                            aria-label="Cuarto"
-                        ></li>
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="4"
-                            aria-label="Quinto"
-                        ></li>
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="5"
-                            aria-label="Sexto"
-                        ></li>
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="6"
-                            aria-label="Septimo"
-                        ></li>
-                        <li
-                            data-bs-target="#carouselId"
-                            data-bs-slide-to="7"
-                            aria-label="Octavo"
-                        ></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/Default Cot.png"
-                                class="w-100 d-block"
-                                alt="First slide"
-                            />
+            </div>
+            <div class="p-2">
+                <div class="bg-slate-300 rounded-md p-2 saira text-gray-700 border-t-slate-400 border-t-2">
+                    <div>
+                        <p class="text-center text-lg">¡LittleRegress es una experiencia ABDL traida al universo de
+                            Minecraft!</p>
+                        <p class="text-center">¿Por donde quieres empezar?</p>
+                    </div>
+                    <div class="text-white flex flex-wrap gap-2 justify-between w-full p-2">
+                        <div class="p-2 h-[100px] w-full sm:w-full md:w-[49%] bg-slate-600 rounded-lg bg-cover bg-center"
+                            style="background-image: url('pages/resources/Images/mc_screenshots/Default\ Cot.png');">
+                            <div class="backdrop-blur-sm rounded-md">
+                                <p class="text-center">LITTLEREGRESS LEGACY</p>
+                            </div>
+                            <div class="relative top-[35px] w-full">
+                                <button class="
+                                bg-white text-gray-600 rounded-md 
+                                w-full hover:bg-gray-300
+                                transition-colors duration-200
+                                " @click="lrSelection = 'legacy'">
+                                    Explorar
+                                </button>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/Changer.png"
-                                class="w-100 d-block"
-                                alt="Second slide"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/blue_tapiz.png"
-                                class="w-100 d-block"
-                                alt="Tercero"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/Default_bath.png"
-                                class="w-100 d-block"
-                                alt="Cuarto"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/Default_chair.png"
-                                class="w-100 d-block"
-                                alt="Quinto"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/Default_closset.png"
-                                class="w-100 d-block"
-                                alt="Sexto"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/Default_trainner.png"
-                                class="w-100 d-block"
-                                alt="Septimo"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="pages/resources/Images/mc_screenshots/Default_wash.png"
-                                class="w-100 d-block"
-                                alt="Octavo"
-                            />
+                        <div class="p-2 h-[100px]  w-full md:w-[49%] bg-slate-600 rounded-lg bg-cover bg-center"
+                            style="background-image: url('pages/resources/Images/mc_screenshots/LR2_nappies.png');">
+                            <div class="backdrop-blur-sm rounded-md">
+                                <p class="text-center">LITTLEREGRESS REBIRTH</p>
+                            </div>
+                            <div class="relative top-[35px] w-full">
+                                <button class="
+                                bg-white text-gray-600 rounded-md 
+                                w-full hover:bg-gray-300
+                                transition-colors duration-200
+                                " @click="lrSelection = 'rebirth'">
+                                    Explorar
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselId"
-                        data-bs-slide="prev"
-                    >
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselId"
-                        data-bs-slide="next"
-                    >
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
-                <div class=" p-2">
-                    <div class=" bcontainer cont2 p-2 rounded-3">
-                        <div v-if="lang == 'es'" id="esparagrahp">
-                            <p class="text-center">LittleRegress en un datapack para minecraft que añade el rol de bebé y cuidador a tu experiencia de minecraft, teniendo en cuenta la seguridad del usuario en un entorno de un solo jugador y multijugador, explorando experiencias aptas para la terapia de regresion, uso por la comunidad ABDL y todas sus variantes, ademas de ser de codigo abierto y totalmente modificable por el usuario.</p>
-                            <p class="text-center">El datapack actualmente usar elementos creados como lo son los pañales, ropa, cuna, cambiador, bañera, inodoro, chupon de bebe, silla de bebe y demas.</p>
-                            <p class="text-danger text-center">El datapack se encuentra en desarrollo por lo que el contenido puede cambiar.</p>
+            </div>
+            <div v-if="lrSelection === 'legacy'">
+                <div class="p-2 saira">
+                    <!-- Legacy description -->
+                    <div class="p-2 bg-slate-300 rounded-md">
+                        <div class="flex justify-between bg-slate-100 p-2 rounded-md">
+                            <div v-if="lang == 'es'">
+                                <h1 class="text-lg">Ultima versión</h1>
+                            </div>
+                            <div v-if="lang == 'en'">
+                                <h1 class="text-lg">Latest version</h1>
+                            </div>
+                            <div>
+                                <h1 class="text-lg">1.20.4</h1>
+                            </div>
                         </div>
-                        <div v-if="lang == 'en'" id="enparagrahp">
-                            <p class="text-center">LittleRegress is a datapack for Minecraft that adds the baby and caregiver roles to your Minecraft experience, taking into account user safety in both single-player and multiplayer environments. It explores experiences suitable for regression therapy, catering to the ABDL (Adult Baby Diaper Lover) community and all its variants. Additionally, it is open-source and fully customizable by the user.</p>
-                            <p class="text-center">The current datapack provides the opportunity use items specifically created such as diapers, clothing, crib, changing table, bathtub, toilet, baby pacifier, baby chair, and more.</p>
-                            <p class="text-danger text-center">Please note that the datapack is still in development, so the content may undergo changes.</p>
-                        </div>
-            
-                    </div>
-                </div>
-                
-                <div class="p-2">
-                    <div class="bcontainer cont2 p-2 rounded-1">
                         <div v-if="lang == 'es'">
-                            <h1>1.20.4</h1>
-                            <p>Debido a problemas de compatiblidad con las ultimas versiones de minecraft de la 1.20.5 en adelante se ha optado por reiniciar el desarrollo del datapack, esta desición no se ha tomado a la ligera y se ha intentado en lo posible actualizar el datapack a las versiones mas recientes que a este tiempo son de la 1.20.5 a la 1.21, cuyos intentos no fueron satisfactorios y han causado muchos problemas de inestabilidad.</p>
-                            <p>La versión actual del datapack no sera borrada y se corregiran bugs en lo posible los cuales sean reportados al correo abthinksdl@gmail.com, estare atento a cualquier sugerencia de cualquier usuario como idea para implementar en el datapack.</p>
-                            <p>Es probable que el desarrollo se demore mas de la cuenta, hay que tener en cuenta que en mi equipo de trabajo soy el unico programador y diseñador, sin embargo hay personas que me ayudan probando el contendo y encontrando errores.</p>
-                            <p>La segunda version del datapack tendra contenido nuevo, mejoras de dimensiones, estructuras, mas ropa, mas mecanicas, mucho mas contentido y mejor balanceado.</p>
-                            <p>Si quieres contribuir al desarrollo del datapack de forma completamente voluntaria estare mas que encantado de recibir ayuda en el desarrollo.</p>
-                            <p>Si tienes buenos conocimientos en mcfunction para minecraft java de la 1.20.5 en adelante y quieres ayudar eres bienvenido, el proyecto siempre sera de codigo abierto por lo que puedes contribuir al proyecto de forma directa.</p>
-                            <p class="text-danger">Nota: Esta datapack nunca sera vendido, el contenido creado por y para este datapack busca ser libre y darle la posibilidad a cualquier usuario de minecraft de experimentar el contenido que este proporciona.</p>
+                            <p>
+                                LittleRegress Legacy es la primera experiencia ABDL desarrollada por el equipo
+                                LitleRegress
+                                dentro de minecraft.
+                                Esta versión quedó detenida en el tiempo debido a problemas de portabilidad para la
+                                version
+                                1.20.5 de minecraft java, sin embargo, esta versión aun tiene mucho potencial para
+                                explorar
+                                y revivir tu bebe interior dentro de minecraft.
+                            </p>
+                            <p>
+                                Nuestro desarrollador bebe snuggle, decidió tomar la delantera y dar lo mejor de si
+                                mismo
+                                para crear esta versión, ya que el desarrollo que trae este datapack es de alta
+                                complejidad
+                                tecnica
+                                en donde se rompieron las barreras de lo que no se pensaba posible hacer usando
+                                datapacks.
+                            </p>
                         </div>
                         <div v-if="lang == 'en'">
-                            <h1>1.20.4</h1>
-                            <p>Due to compatibility issues with the latest versions of Minecraft from 1.20.5 onwards, we have decided to restart the development of the datapack. This decision was not made lightly and every effort was made to update the datapack to the latest versions, which currently range from 1.20.5 to 1.21. However, these attempts were not successful and have caused many stability issues.</p>
-                            <p>The current version of the datapack will not be deleted, and bugs will be fixed as much as possible if they are reported to the email abthinksdl@gmail.com. I will be attentive to any suggestions from any user as ideas to implement in the datapack.</p>
-                            <p>It is likely that the development will take longer than expected. Please keep in mind that I am the only programmer and designer on my team, although there are people who help me by testing the content and finding errors.</p>
-                            <p>The second version of the datapack will have new content, improved dimensions, structures, more clothing, more mechanics, much more content, and better balance.</p>
-                            <p>If you want to contribute to the development of the datapack on a completely voluntary basis, I will be more than happy to receive help in the development.</p>
-                            <p>If you have good knowledge of mcfunction for Minecraft Java from 1.20.5 onwards and want to help, you are welcome. The project will always be open-source, so you can contribute to the project directly.</p>
-                            <p class="text-danger">Note: This datapack will never be sold. The content created by and for this datapack aims to be free and give any Minecraft user the opportunity to experience the content that it provides.</p>
+                            <p>
+                                LittleRegress Legacy is the first ABDL experience developed by the LittleRegress team
+                                within
+                                Minecraft.
+                                This version was frozen in time due to portability issues with Minecraft Java Edition
+                                1.20.5.
+                                However, it still holds great potential for exploration and for reconnecting with your
+                                inner
+                                baby within the Minecraft universe.
+                            </p>
+                            <p>
+                                Our baby developer Snuggle took the lead and gave his best to create this version,
+                                as the development behind this datapack involves a high level of technical complexity,
+                                breaking boundaries of what was once thought impossible using datapacks alone.
+                            </p>
                         </div>
                     </div>
-                </div>
-
-                <div class="navbar justify-content-center " id="imgPanel">
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Default Cot.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Bath.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/blue_tapiz_2.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Chair.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Changer.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Closset_2.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Cot.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Default nappy.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                    <div class="nav-item col-12 col-sm-12 col-md-6 col-lg-4 p-1 ">
-                        <img src="pages/resources/Images/mc_screenshots/Default paci.png" alt="aa" class="w-100 imgdef">
-                    </div>
-                </div>
-
-                
-                <hr>
-
-                <div id="crafting" class="container">
-                    <div v-if="lang == 'en'">
-                        <h1 class="text-center">INFORMATION</h1>
-                    </div>
-
-                    <div v-if="lang == 'es'">
-                        <h1 class="text-center">INFORMACIÓN</h1>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Pañal":"Nappy" }}</h4>                        
-                            <img class="imgdef w-100" src="pages/resources/Images/craftings/nappy.png" alt="closset crafting">                            
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">Compota</h4>
-                        
-                            <img class="imgdef w-100" src="pages/resources/Images/craftings/compota.png" alt="closset crafting">
- 
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Laxante":"Laxative" }}</h4>
- 
-                            <img class="imgdef w-100" src="pages/resources/Images/craftings/lax.png" alt="closset crafting">
-
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Chupon":"Pacifier" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/Paci.png" alt="bath crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Default paci.png" alt="Def bathº">
+                    <!-- Legacy content -->
+                    <div class="my-2 p-2 bg-slate-300 rounded-md">
+                        <div class="bg-slate-100 p-2 rounded-md">
+                            <div v-if="lang == 'es'">
+                                <h1 class="text-lg">Contenido</h1>
+                            </div>
+                            <div v-if="lang == 'en'">
+                                <h1 class="text-lg">Content</h1>
+                            </div>
                         </div>
-                    </div>
+                        <div>
+                            <details>
+                                <summary v-if="lang == 'es'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Muebles
+                                </summary>
+                                <summary v-if="lang == 'en'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Furniture
+                                </summary>
+                                <div class="bg-white rounded-md p-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">
+                                            Cuna
+                                        </summary>
+                                        <summary v-if="lang == 'en'">
+                                            Cot / Crib
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Cot.png" alt="cot"
+                                                class="w-full rounded-md">
+                                            <p v-if="lang == 'es'">La cuna es uno de los principales elementos, puedes
+                                                pasar
+                                                la noche, y para usarla tienes que saltar sobre ella.</p>
+                                            <p v-if="lang == 'en'">The crib is one of the main elements, you can spend
+                                                the
+                                                night in it, and to use it you have to jump on it.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/cot.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">
+                                            Cambiador
+                                        </summary>
+                                        <summary v-if="lang == 'en'">
+                                            Baby changing table
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Changer.png"
+                                                alt="changing table" class="rounded-md w-full">
+                                            <p v-if="lang == 'es'">El cambiador es un mueble para dar ambientación, el
+                                                cual
+                                                puede ser usado perfectamente dentro de la habitación de un bebe
+                                                travieso.
+                                            </p>
+                                            <p v-if="lang == 'en'">The changing table is a piece of furniture that
+                                                creates
+                                                atmosphere and can be perfectly used in a naughty baby's room.
+                                            </p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/changer.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Bacinica de entrenamiento</summary>
+                                        <summary v-if="lang == 'en'">training potty</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Default_trainner.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Usada normalmente cuando un bebe esta aprendiendo a ir al baño, dentro del datapack puedes usarla para no tener "accidentes".</p>
+                                            <p v-if="lang == 'en'">Typically used when a baby is potty training, you can use it inside the datapack to avoid "accidents.".</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/training.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Inodoro</summary>
+                                        <summary v-if="lang == 'en'">Bathroom tax</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Bath.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Usada por adultos o niños grandes, suele ser la mejor opción cuando tienes ganas de ir al baño.</p>
+                                            <p v-if="lang == 'en'">Used by adults or older children, it's often the best option when you have to go to the bathroom.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/bath.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Silla para bebes</summary>
+                                        <summary v-if="lang == 'en'">Baby Chair</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Chair.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Puedes subirte en ella para sentarte junto a tu cuidador, solo es un elemento decorativo, pero se ve bonito.</p>
+                                            <p v-if="lang == 'en'">You can climb on it to sit next to your caregiver, it's just a decorative element, but it looks nice.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/chair.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="bg-white rounded-md p-1 my-1">
+                                    <details>
+                                        <summary v-if="lang == 'es'">Armario</summary>
+                                        <summary v-if="lang == 'en'">Cupboard</summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Closset_2.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">Es un mueble con pañales, es solo decorativo.</p>
+                                            <p v-if="lang == 'en'">It's a piece of furniture with diapers, it's just decorative.</p>
+                                            <div class="bg-blue-100 rounded-md p-2">
+                                                <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                                <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                                <div class="flex justify-center bg-[#b4b4b4] rounded-md">
+                                                    <img src="pages/resources/Images/craftings/closset.png"
+                                                        alt="cot_crafting">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                            <details>
+                                <summary v-if="lang == 'es'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Accesorios
+                                </summary>
+                                <summary v-if="lang == 'en'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Accesories
+                                </summary>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Chupete
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Pacifier
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Default paci.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">El chupete dentro del datapack tiene una mecanica especial, es que ayuda a reducir el miedo del jugador a las creaturas ostiles, puedes usarlo por la noche para que tu jugador corra menos riesgo de tener un "accidente".</p>
+                                            <p v-if="lang == 'en'">The pacifier inside the datapack has a special mechanic, which is that it helps reduce the player's fear of hostile creatures. You can use it at night so that your player runs less risk of having an "accident."</p>
+                                        </div>
+                                        <div class="bg-blue-100 rounded-md p-2">
+                                            <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                            <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                            <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                <img src="pages/resources/Images/craftings/Paci.png"
+                                                    alt="cot_crafting">
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Pañal
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Diaper
+                                        </summary>
+                                        <div>
+                                            <img src="pages/resources/Images/mc_screenshots/Default nappy.png" alt="" srcset="">
+                                            <p v-if="lang == 'es'">
+                                                El pañal es uno de los mejores items del datapack, ya que puedes usarlo para evitar ensuciar el suelo o tus pantalones, puedes mojar el pañal o ensuciarlo.
+                                            </p>
+                                            <p v-if="lang == 'en'">
+                                                The diaper is one of the best items in the datapack, as you can use it to avoid dirtying the floor or your pants, you can wet the diaper or dirty it.
+                                            </p>
+                                        </div>
+                                        <div class="bg-blue-100 rounded-md p-2">
+                                            <p v-if="lang == 'es'" class="font-extrabold">Crafteo</p>
+                                            <p v-if="lang == 'en'" class="font-extrabold">Crafting</p>
+                                            <div class="flex justify-center bg-[#C6C6C6] rounded-md">
+                                                <img src="pages/resources/Images/craftings/nappy.png"
+                                                    alt="cot_crafting">
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                            <details>
+                                <summary v-if="lang == 'es'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Mecanicas
+                                </summary>
+                                <summary v-if="lang == 'en'" class="bg-slate-400 p-1 rounded-md my-2">
+                                    Mechanics
+                                </summary>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Sistema de ida al baño
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Potty system
+                                        </summary>
+                                        <div>
+                                            <div v-if="lang == 'es'">
+                                                <p>
+                                                    Dependiendo de las acciones que realices dentro del datapack, tu personaje empezará a sentir ganas de ir al baño.  
+                                                    Verás una barrita encima del inventario que mostrará su necesidad.  
+                                                    Cuando esta llegue al máximo... ¡ups! El jugador no aguantará más y tendrá un accidente.
+                                                </p>
+                                                <div class="bg-white rounded-md p-2">
+                                                    <p>
+                                                        Si lleva puesto un pañal, este se mojará o se ensuciará según lo que haya pasado.
+                                                    </p>
+                                                    <p>
+                                                        Si no lleva nada puesto, hará una acción especial para mostrar si se hizo pipí o popó.
+                                                    </p>
+                                                    <p>
+                                                        Cuando el jugador se hace popó, aparecerá un ítem en el suelo (no se puede recoger)  
+                                                        que simula ser caquita de forma muy sencilla y nada gráfica. Este desaparecerá al poco tiempo.
+                                                    </p>
+                                                    <p>
+                                                        Si se hace pipí, se generará un charquito en el suelo usando un modelo 3D.  
+                                                        Ese charquito se queda por un tiempo... ¡y curiosamente puede recogerse!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div v-if="lang == 'en'">
+                                                <p>
+                                                    Depending on the actions you perform inside the datapack, your character will start feeling the need to go potty.  
+                                                    A little bar will appear above the inventory showing their need.  
+                                                    When it reaches the top... uh-oh! The player won’t be able to hold it anymore and will have an accident.
+                                                </p>
+                                                <div class="bg-white rounded-md p-2">
+                                                    <p>
+                                                        If they’re wearing a diaper, it will get wet or messy depending on what happened.
+                                                    </p>
+                                                    <p>
+                                                        If they’re not wearing anything, a special action will play to show if they had a wee-wee or a poopy accident.
+                                                    </p>
+                                                    <p>
+                                                        When the player messes themselves, a non-collectible item will appear on the ground,  
+                                                        simulating poop in a very simple and non-graphic way. It will disappear after a short while.
+                                                    </p>
+                                                    <p>
+                                                        When the player wets themselves, a 3D puddle model will be placed on the ground.  
+                                                        The puddle will remain for a bit... and curiously, it can be picked up!
+                                                    </p>
+                                                </div>
+                                            </div>
 
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Bloque de patro de nuves":"Blue cloud tapiz patron block" }}  </h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/Blue tapiz.png" alt="bath crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/blue_tapiz_2.png" alt="Def bathº">
-                        </div>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Baño":"Bath" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/bath.png" alt="bath crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Default_bath.png" alt="Def bathº">
-                        </div>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Cuna":"Cot / Crib" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/cot.png" alt="bath crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Cot.png" alt="Def bathº">
-                        </div>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Silla de bebes":"baby Chair" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/chair.png" alt="bath crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Default_chair.png" alt="Def bathº">
-                        </div>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center">{{ lang == "es"?"Bañera":"Bathtub" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/wash.png" alt="bath crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Default_wash.png" alt="Def bathº">
-                        </div>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center"> {{ lang == "es"?"Mesa de cambios":"Changing Table" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/changer.png" alt="bath crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Changer.png" alt="Def bathº">
-                        </div>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center"> {{ lang == "es"?"Closset de pañales":"Nappy Closset" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/closset.png" alt="closset crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Closset_2.png" alt="Def closset">
-                        </div>
-                    </div>
-
-                    <div class="abcontainers p-2 my-2">
-                        <h4 class="text-center"> {{ lang == "es"?"Entrenador de baño para bebes":"Potty Trainning" }}</h4>
-                        <div class="navbar">
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/craftings/training.png" alt="closset crafting">
-                            <h1 class="text-center nav-item col-12 col-sm-12 col-md-3 col-lg-4">=</h1>
-                            <img class="imgdef nav-item col-12 col-sm-12 col-md-3 col-lg-4" src="pages/resources/Images/mc_screenshots/Default_trainner.png" alt="Def closset">
-                        </div>
-                    </div>
-
+                                            <p v-if="lang == 'en'">The pacifier inside the datapack has a special mechanic, which is that it helps reduce the player's fear of hostile creatures. You can use it at night so that your player runs less risk of having an "accident."</p>
+                                        </div>
                     
-                    
-
+                                    </details>
+                                </div>
+                                <div>
+                                    <details>
+                                        <summary v-if="lang == 'es'" class="bg-white p-1 rounded-md my-1">
+                                            Editor
+                                        </summary>
+                                        <summary v-if="lang == 'en'" class="bg-white p-1 rounded-md my-1">
+                                            Editor
+                                        </summary>
+                                        <div>
+                                            <div v-if="lang == 'es'">
+                                                <p>
+                                                    Cuando haces aparecer uno de los muebles del datapack, este se generará en su posición por defecto.  
+                                                    Pero si quieres moverlo a otro lugar o girarlo, ¡puedes activar el modo editor siguiendo estos pasitos!
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Consigue una campanita 🔔</li>
+                                                        <li class="p-2">• Tócala tres veces rápido, como si jugaras con ella ✨</li>
+                                                        <li class="p-2">• Se abrirá un menú mágico que te dejará activar el modo editor 🛠️</li>
+                                                    </ol>
+                                                </div>
+                                                <p>
+                                                    Una vez que el modo editor esté activo, verás una partícula azul brillante sobre cada mueble.  
+                                                    Eso significa que puedes interactuar con ellos. Aquí te explico cómo:
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Acércate al mueble que quieres mover 🚶‍♂️</li>
+                                                        <li class="p-2">• Agáchate (sneak) y quédate así unos segundos ⏳</li>
+                                                        <li class="p-2">• Aparecerá un mensajito en el chat donde el editor te pedirá elegir qué deseas mover 🗨️</li>
+                                                        <li class="p-2">• Luego te preguntará si quieres moverlo o rotarlo 🔄</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div v-if="lang == 'en'">
+                                                <p>
+                                                    When you place a piece of furniture from the datapack, it will appear in its default position.  
+                                                    But if you'd like to move or rotate it, you can enter edit mode by following these simple steps!
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Get a little bell 🔔</li>
+                                                        <li class="p-2">• Ring it three times quickly, like you're playing with it ✨</li>
+                                                        <li class="p-2">• A magical menu will pop up and let you activate edit mode 🛠️</li>
+                                                    </ol>
+                                                </div>
+                                                <p>
+                                                    Once edit mode is active, all furniture pieces will show a cute blue particle on top.  
+                                                    That means they're ready to be edited! Here's how to interact with them:
+                                                </p>
+                                                <div class="bg-white">
+                                                    <ol>
+                                                        <li class="p-2">• Walk up to the furniture you want to move 🚶‍♂️</li>
+                                                        <li class="p-2">• Sneak (crouch) and hold for a few seconds ⏳</li>
+                                                        <li class="p-2">• A little message will appear in the chat asking what you want to adjust 🗨️</li>
+                                                        <li class="p-2">• Then, it will ask if you'd like to move or rotate it 🔄</li>
+                                                    </ol>
+                                                </div>
+                                            </div>                                                                                     
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </div>
-        
-            
-        
+    </main>
 
+    <footer class="bg-slate-800 h-[200px]">
 
+    </footer>
 
-    </div>    
-    
-    <script src="pages/resources/vue_components/navbar.js"></script>
-    <script src="pages/resources/bootstrap/js/bootstrap.min.js"></script>
-    <script src="pages/resources/JS/index.js"></script>
-    
+    <script src="pages/resources/komponent/komponent.js"></script>
+
+    <script>
+
+        comp = new Komponent()
+
+        async function loadComponents() {
+
+            await comp.registerComponent('./pages/pkComponents/top_bar.khtml', 'navbar')
+
+            Vue.component('top-bar', {
+                props: ['lang'],
+                template: comp.getContent('navbar').text,
+                data: function () {
+                    return {
+                        topBarUrls : {
+                            index : './index.html',
+                            aboutUs : './pages/aboutUs.html',
+                            downloads : '',
+                            development : ''
+                        }
+                    }
+                }
+            })
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    language: navigator.language.substring(0, 2),
+                    lang: '',
+                    navbarContent: '',
+                    lrSelection: null
+                },
+                methods: {
+
+                },
+                mounted() {
+
+                    var languaje = navigator.language.substring(0, 2);
+                    if (languaje == 'es') {
+                        this.lang = 'es';
+                    } else {
+                        this.lang = 'en';
+                    }
+
+                }
+
+            });
+
+        }
+
+        loadComponents()
+
+    </script>
+
 </body>
+
 </html>

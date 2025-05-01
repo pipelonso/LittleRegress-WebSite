@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {    
+    window.location.href = './newIndex.html'
+})
+
 
 var vm = new Vue({
     el:'#app',
