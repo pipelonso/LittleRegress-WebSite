@@ -92,7 +92,17 @@
 
             Vue.component('top-bar', {
                 props: ['lang'],
-                template: comp.getContent('navbar').text
+                template: comp.getContent('navbar').text,
+                data: function () {
+                    return {
+                        topBarUrls : {
+                            index : './../index.html',
+                            aboutUs : './aboutUs.html',
+                            downloads : '',
+                            development : ''
+                        }
+                    }
+                }
             })
 
             var vm = new Vue({
