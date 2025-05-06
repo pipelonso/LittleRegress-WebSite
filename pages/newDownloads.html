@@ -35,48 +35,33 @@
                 </div>
             </div>
             <div>
-                <div class="flex justify-center">
-                    <img src="resources/Images/svg/Snuggle_danny_dev_LR.svg" alt="" srcset="">
-                </div>
-                <section class="py-10 px-4 rounded-2xl">
-                    <h2 v-if="lang == 'es'" class="text-3xl font-bold text-center mb-8"> Sobre el equipo</h2>
-                    <h2 v-if="lang == 'en'" class="text-3xl font-bold text-center mb-8"> About the team</h2>
-                  
-                    <div class="flex flex-wrap justify-center gap-6">
-                      <!-- Snuggle -->
-                      <div class="bg-white rounded-2xl shadow-md p-6 max-w-sm w-full">
-
-                        <h3 class="text-xl font-bold mb-2">🦊 Snuggle</h3>
-                  
-                        <p v-if="lang == 'es'" class="text-gray-700">
-                          Snuggle es un zorrito curioso y juguetón que se encarga de programar todo el datapack.
-                          Es muy detallista y le gusta que todo funcione como debe ser, aunque a veces se distrae...
-                          ¡y puede tener pequeños accidentes! 🍼
-                        </p>
-                        <p v-if="lang == 'en'" class="text-gray-700">
-                          Snuggle is a curious and playful little fox who handles all the datapack programming.
-                          He loves when things work just right, although sometimes he gets distracted...
-                          and might have little accidents! 🍼
-                        </p>
-                      </div>
-                  
-                      <!-- Danni -->
-                      <div class="bg-white rounded-2xl shadow-md p-6 max-w-sm w-full">
-                        <h3 class="text-xl font-bold mb-2">🐰 Danni</h3>
-                        <p v-if="lang == 'es'" class="text-gray-700">
-                          Danni es un conejito zorrillo que actúa como el tester del datapack. Es muy curioso, le encanta explorar los muebles,
-                          encontrar errores y darle ideas nuevas a Snuggle. Siempre está listo con su pañalito para cualquier aventura. 🧷
-                        </p>
-                        <p v-if="lang == 'en'" class="text-gray-700">
-                          Danni is a bunny-skunk who plays the role of tester for the datapack. He’s curious and loves to explore furniture,
-                          find bugs, and give Snuggle new ideas. He's always ready with his diaper for any adventure. 🧷
-                        </p>
-                      </div>
+                <div class="p-2">
+                    <div class="bg-white p-2 rounded-md">
+                        <h1 class="text-lg" v-if="lang == 'es'">Descargas</h1>    
+                        <h1 class="text-lg" v-if="lang == 'en'">Downloads</h1>    
+                        <div class="bg-blue-200 h-[2px] rounded-md"></div>
                     </div>
-                  </section>
-                  
+                    <div class="bg-gray-300 my-2 rounded-md p-2">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h1>LITTLEREGRESS LEGACY</h1>
+                                <p>Version: 1.20.4</p>
+                            </div>
+                            <div class="bg-red-100 p-2 rounded-md h-full">
+                                <a href="https://github.com/pipelonso/LittleRegress/releases/tag/MV1.20.4-DV1.4B" target="_blank">
+                                    <p v-if="lang == 'es'">
+                                        Descargar en GitHub
+                                    </p>
+                                    <p v-if="lang == 'en'">
+                                        Download on GitHub
+                                    </p>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </main>
 

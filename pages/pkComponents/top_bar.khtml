@@ -29,10 +29,10 @@
                 </div>
                 <div class="hover:text-pink-500">
                     <div v-if="lang == 'es'">
-                        <a href="">Descargas</a>
+                        <a :href="topBarUrls.downloads">Descargas</a>
                     </div>
                     <div v-else>
-                        <a href="">Downloads</a>
+                        <a :href="topBarUrls.downloads">Downloads</a>
                     </div>
                     <div class="h-[2px] bg-yellow-300 w-[50%]"></div>
                 </div>
