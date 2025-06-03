@@ -604,21 +604,46 @@
                     <div class="bg-gradient-to-r from-slate-900 to-slate-700 p-2  hover:bg-slate-400 rounded-md">
                         <div>
                             <a href="https://t.me/littleRegress" target="_blank">
-                                <div class="flex justify-center items-center">
+                                <div class="flex justify-center items-center flex-wrap">
                                     <img src="./pages/resources/Images/icons/icons8-telegram-app-500.png" alt="" srcset="">
                                     
-                                    <div v-if="lang == 'es'" class="flex justify-center">
+                                    <div v-if="lang == 'es'" class="w-[50%] sm:w-full flex justify-center">
                                         <p class="text-white text-3xl">Join to development telegram channel, and get access to exclusive content (SFW) </p>
                                     </div>
-                                    <div v-if="lang == 'en'" class="flex justify-center">
+                                    <div v-if="lang == 'en'" class="w-[50%] sm:w-full flex justify-center">
                                         <p class="text-white text-3xl">Anete al canal de desarrollo en telegram, y accede a contenido exclusivo (SFW)</p>
                                     </div>
-                                
-                                    
                                 </div>
                             </a>
                         </div>
                     </div>
+                    <div class="py-2">
+                        <div class="p-2 bg-slate-700 rounded-md">
+                            <div>
+                                <div v-if="lang == 'en'" class="flex rounded-md flex-wrap items-center">
+                                    <div class="p-2 sm:w-full text-center lg:w-[20%] w-full text-pink-300">
+                                        Beta 1.0 Trailer
+                                    </div>
+                                    <div class="text-center p-2 rounded-md bg-slate-800 text-pink-300 hover:bg-slate-950 sm:w-full lg:w-[80%] w-full">
+                                        <a class="" href="https://youtu.be/xdDIgb51ybQ" target="_blank">
+                                            Watch in youtube        
+                                        </a>
+                                    </div>
+                                </div>
+                                <div v-if="lang == 'es'" class="flex rounded-md flex-wrap items-center">
+                                    <div class="p-2 sm:w-full text-center lg:w-[20%] w-full text-pink-300">
+                                        Trailer Beta 1.0 
+                                    </div>
+                                    <div class="text-center p-2 rounded-md bg-slate-800 text-pink-300 hover:bg-slate-950 sm:w-full lg:w-[80%] w-full">
+                                        <a class="" href="https://youtu.be/-5M9D0SXc8A" target="_blank">
+                                            Mirar en youtube
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="my-2">     
                         
                         <div>
