@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LittleRegress :: Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="resources/tailwindcss/tailwind.js"></script>
+    <script src="resources/vue2/vue_2.js"></script>
+</head>
+<body class="bg-pink-100">
+    
+    <style>
+
+        .saira {
+            font-family: "Saira Extra Condensed", sans-serif;
+        }
+
+        .clouds-frame {
+            background-image: url(resources/Images/svg/clouds.svg);
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+    </style>
+
+    <main>
+
+        <div id="app">
+            <div class="h-[150px]">
+                <div class="clouds-frame bg-cover h-[150px] w-full absolute"></div>
+                <div class="absolute w-full">
+                    <top-bar :lang="lang"></top-bar>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="saira p-2 rounded-md bg-slate-400">
+                    <div class="flex gap-1 bg-slate-300">
+                        <div class="bg-slate-500 w-[2px]"></div>
+                        <p class="text-slate-700">Proposito</p>
+                    </div>
+                    <div class="py-2">
+                        <div>
+                            <div class="p-2 bg-slate-300">
+                                <div class="text-slate-600">
+                                    <div>
+                                        <p>
+                                        LittleRegress es un proyecto destinado para expresar la libre regresión de edad dentro de minecraft. 
+                                        </p>
+                                        <p>
+                                            Este es un proyecto de codigo abierto altamente modificable diseñado para que los usuarios puedan añadir contenido personalizado. 
+                                            El datapack esta bajo la licencia <a class="underline hover:bg-green-300 rounded-md" href="https://github.com/pipelonso/LittleRegressRebirth/blob/main/LICENSE" >GNU General Public License v3.0</a> lo que significa que cada creación que tome como base LittleRegress tiene que ser de codigo abierto y compartir la misma licencia.
+                                        </p>
+                                        <p>
+                                            La ramificación principal del proyecto intentará no añadir contenido inapropiado, y que atente sobre la integridad de los usuarios, en caso de presentarse algún problema con alguien, se replanteara la implementación de dicho contenido.
+                                            Si uno de los usuario desea añadir contenido personalizado puede optar por acudir a los diferentes canales de comunicación proporcionados por el proyecto y dentro de estos proponer ideas o trabajar en conjunto para implementar la funcionalidad dentro del desarrollo.
+                                            Si el contenido que el usuario desee añadir va en contra de las politicas del datapack, no se le negara su creación, sino que tiene completa libertad de realizar un fork del proyecto y trabajar basado en este para agregar su implementación, sin embargo nosotros <strong>no nos hacemos cargo</strong>  de los problemas que traiga esa versión del proyecto.
+                                            Esto se hace para desvincular el contenido inapropiado de la versión principal del proyecto, pero al mismo tiempo no atentar contra la libertad de expresion de cada usuario.
+                                        </p>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+<script src="resources/komponent/komponent.js"></script>
+
+    <script>
+
+        comp = new Komponent()
+
+        async function loadComponents() {
+
+            await comp.registerComponent('./pkComponents/top_bar.khtml', 'navbar')
+
+            Vue.component('top-bar', {
+                props: ['lang'],
+                template: comp.getContent('navbar').text,
+                data: function () {
+                    return {
+                        topBarUrls : {
+                            index : './../index.html',
+                            aboutUs : './aboutUs.html',
+                            downloads : './newDownloads.html',
+                            development : './development.html'
+                        }
+                    }
+                }
+            })
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    language: navigator.language.substring(0, 2),
+                    lang: '',
+                    navbarContent: '',
+                    lrSelection: null
+                },
+                methods: {
+
+                },
+                mounted() {
+
+                    var languaje = navigator.language.substring(0, 2);
+                    if (languaje == 'es') {
+                        this.lang = 'es';
+                    } else {
+                        this.lang = 'en';
+                    }
+
+                }
+
+            });
+
+        }
+
+        loadComponents()
+
+    </script>
+
+</body>
+</html>
