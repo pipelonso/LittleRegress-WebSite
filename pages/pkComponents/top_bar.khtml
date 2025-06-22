@@ -38,10 +38,10 @@
                 </div>
                 <div class="hover:text-pink-500">
                     <div v-if="lang == 'es'">
-                        <a href="">Desarrollo</a>
+                        <a :href="topBarUrls.development">Desarrollo</a>
                     </div>
                     <div v-else>
-                        <a href="">Devtools</a>
+                        <a :href="topBarUrls.development">Devtools</a>
                     </div>
                     <div class="h-[2px] bg-purple-300 w-[50%]"></div>
                 </div>
