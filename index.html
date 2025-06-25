@@ -49,10 +49,14 @@
             </div>
             <div class="p-2">
                 <div class="bg-slate-300 rounded-md p-2 saira text-gray-700 border-t-slate-400 border-t-2">
-                    <div>
-                        <p class="text-center text-lg">¡LittleRegress es una experiencia ABDL traida al universo de
+                    <div v-if="lang == 'es'">
+                        <p class="text-center text-lg">¡LittleRegress es una experiencia ABDL regresiva traida al universo de
                             Minecraft!</p>
                         <p class="text-center">¿Por donde quieres empezar?</p>
+                    </div>
+                    <div v-if="lang == 'en'">
+                        <p class="text-center text-lg">¡LittleRegress is a regressive ABDL experience brought to minecraft universe!</p>
+                        <p class="text-center">¿Where do you want to start?</p>
                     </div>
                     <div class="text-white flex flex-wrap gap-2 justify-between w-full p-2">
                         <div class="p-2 h-[100px] w-full sm:w-full md:w-[49%] bg-slate-600 rounded-lg bg-cover bg-center"
@@ -609,10 +613,10 @@
                                 <div class="flex justify-center items-center flex-wrap">
                                     <img src="./pages/resources/Images/icons/icons8-telegram-app-500.png" alt="" srcset="">
                                     
-                                    <div v-if="lang == 'es'" class="w-[50%] sm:w-full flex justify-center">
+                                    <div v-if="lang == 'en'" class="w-[50%] sm:w-full flex justify-center">
                                         <p class="text-white text-3xl">Join to development telegram channel, and get access to exclusive content (SFW) </p>
                                     </div>
-                                    <div v-if="lang == 'en'" class="w-[50%] sm:w-full flex justify-center">
+                                    <div v-if="lang == 'es'" class="w-[50%] sm:w-full flex justify-center">
                                         <p class="text-white text-3xl">Anete al canal de desarrollo en telegram, y accede a contenido exclusivo (SFW)</p>
                                     </div>
                                 </div>
