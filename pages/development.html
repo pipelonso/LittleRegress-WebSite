@@ -56,7 +56,57 @@
                         <div>
                             <div class="p-2 bg-slate-300">
                                 <div class="text-slate-600">
-                                    <div>
+                                    <div v-if="lang == 'en'">
+                                        <p>
+                                            LittleRegress is a project created to express free age regression within Minecraft.
+                                        </p>
+                                        <p>
+                                            This is a highly customizable open-source project designed so that users can add their own custom content.
+                                            The datapack is under the <a
+                                                class="underline hover:bg-green-300 rounded-md"
+                                                href="https://github.com/pipelonso/LittleRegressRebirth/blob/main/LICENSE">GNU General Public License v3.0</a>,
+                                            which means that any creation based on LittleRegress must also be open-source and share the same license.
+                                        </p>
+                                        <p>
+                                            The main branch of the project aims not to include inappropriate content or anything that compromises the integrity of users.
+                                            If any issue arises with someone or with specific content, the implementation of that content will be reconsidered.
+                                            If a user wishes to add custom content, they are welcome to reach out through the various communication channels provided by the project,
+                                            and through those, propose ideas or collaborate to implement features in development.
+                                            If the content the user wishes to add goes against the datapack’s policies, their creation will not be denied;
+                                            instead, they are completely free to fork the project and work on their version to include their implementation.
+                                            However, we <strong>do not take responsibility</strong> for any problems that may arise from that version of the project.
+                                            This is to separate inappropriate content from the main version, while also respecting every user’s freedom of expression.
+                                        </p>
+                                        <div class="flex gap-1">
+                                            <div class="bg-blue-500 w-[2px]"></div>
+                                            <p> <strong> Content Regulations </strong> </p>
+                                        </div>
+                                        <p>
+                                            Due to its philosophy of providing a safe exploration environment, the datapack follows these development rules:
+                                        </p>
+                                        <ol>
+                                            <li>
+                                                • No content including nudity or sexual suggestions will be added.
+                                            </li>
+                                            <li>
+                                                • Although the datapack includes elements like diapers, which could be seen as a fetish by some, its purpose is not to portray these as sexual in nature.
+                                                The use of such elements is left to the discretion of the user.
+                                            </li>
+                                            <li>
+                                                • If any user encounters issues with non-toggleable content, a discussion will take place regarding its re-implementation,
+                                                and efforts will be made to make that content optional.
+                                            </li>
+                                            <li>
+                                                • If a mechanic is added that may be unpleasant for users who are more sensitive to certain content,
+                                                it will be optional by default and can be enabled or disabled in the datapack settings.
+                                                However, please note that this may not apply to older versions of the datapack.
+                                            </li>
+                                            <li>
+                                                • The LittleRegress team is not always obligated to comply with every demand or complaint from the community.
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div v-if="lang == 'es'">
                                         <p>
                                             LittleRegress es un proyecto destinado para expresar la libre regresión de
                                             edad dentro de minecraft.
@@ -132,7 +182,30 @@
                             <div>
                                 <div class="p-2 bg-slate-300">
                                     <div class="text-slate-600">
-                                        <div>
+                                        <div v-if="lang == 'en'">
+                                            <p>
+                                                LittleRegress is a symbolic expression and self-exploration, a symbolic safe environment that takes advantage 
+                                                of the freedom Minecraft provides.
+                                            </p>
+                                            <p>
+                                                <strong>LittleRegress is not a therapy</strong>, it's a place where people can play, feel small, 
+                                                imagine being cared for, or explore their softer and more vulnerable side — 
+                                                all within a video game that allows for creativity without putting anyone at physical risk.
+                                            </p>
+                                            <p>
+                                                One of the core ideas of LittleRegress is to encourage <a target="_blank" class="underline" href="https://www.verywellhealth.com/age-repression-therapy-5212676">conscious or symbolic regression</a>,
+                                                which involves helping the user reach a state of vulnerability and safety as a way to ease stress or anxiety-related issues.
+                                                It’s important to clarify that our team does not include any psychologists, so even though this type of experience may be self-induced, 
+                                                it should ideally be done under the supervision of a responsible person, and if any issues arise, 
+                                                you should seek psychological support at a health center as soon as possible.
+                                            </p>
+                                            <p class="italic bg-blue-300 p-2">
+                                                This datapack is meant to be a symbolic and expressive tool within Minecraft. It is not guided therapy and does not replace professional psychological care.
+                                                If you choose to explore your inner child or vulnerable side, make sure you are in a physically and emotionally safe space, and preferably with someone who can support you if needed.
+                                                It’s okay to feel small — but you are also valuable just as you are now.
+                                            </p>
+                                        </div>
+                                        <div v-if="lang == 'es'">
                                             <p>
                                                 LittleRegress es una expresion simbolica y de autoexploración, un entorno simbolico seguro que aprovecha 
                                                 la libertad que minecraft proporciona.
@@ -204,8 +277,7 @@
                 },
                 mounted() {
 
-                    var languaje = navigator.language.substring(0, 2);
-                    if (languaje == 'es') {
+                    if (navigator.language.substring(0, 2) == 'es') {
                         this.lang = 'es';
                     } else {
                         this.lang = 'en';
