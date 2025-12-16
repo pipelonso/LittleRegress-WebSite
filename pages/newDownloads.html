@@ -11,6 +11,7 @@
         rel="stylesheet">
     <script src="resources/tailwindcss/tailwind.js"></script>
     <script src="resources/vue2/vue_2.js"></script>
+    <link rel="stylesheet" href="resources/CSS/animations.css">
 </head>
 <body class="bg-pink-100">
     
@@ -62,10 +63,24 @@
                     </div>
                     <div class="bg-gray-300 my-2 rounded-md p-2">
                         <div class="flex justify-between items-center">
+                        
                             <div>
                                 <h1>LITTLEREGRESS REBIRT Beta 1.0</h1>
                                 <p>Version: 1.21.5 Java</p>
                             </div>
+                            <div class="flex gap-2 items-center">
+                                <div class="p-2">
+                                    <template v-if="lang == 'en'">
+                                        <button class="bg-green-100  p-2 rounded-md h-full hover:bg-green-200" @click="showRebirthInstructions = !showRebirthInstructions">
+                                            Install instructions
+                                        </button>
+                                    </template>
+                                    <template v -if="lang == 'es'">
+                                        <button class="bg-green-100 p-2 rounded-md h-full hover:bg-green-200" @click="showRebirthInstructions = !showRebirthInstructions">
+                                            Instrucciones de instalación
+                                        </button>
+                                    </template>
+                                </div>
                             <div class="bg-red-100 p-2 rounded-md h-full">
                                 <a href="https://github.com/pipelonso/LittleRegressRebirth/releases/tag/LR_Beta_Release" target="_blank">
                                     <p v-if="lang == 'es'">
@@ -75,12 +90,213 @@
                                         Download on GitHub
                                     </p>
                                 </a>
-                                
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2" v-if="showRebirthInstructions">
+                    <div class="bg-white p-2 rounded-md">
+                        <div class="p-2 bg-slate-600 rounded-md">
+                            <p v-if="lang == 'es'" class="text-lg text-white text-center">Intrucciones de instalación LittleRegress rebirth</p>
+                            <p v-if="lang == 'en'" class="text-lg text-white text-center">LittleRegress Rebirth install instructions</p>
+                        </div>
+                        <div class="flex justify-between flex-wrap gap-2 mt-2 items-center">
+                            <div class="sm:w-full md:w-7/12 flex items-center gap-2 p-2">
+                                <div>
+                                    <button @click="() => {if (rebirthImageIndex > 0) { rebirthImageIndex-- }}">
+                                        <img style="width: 80px; height: 80px;" src="resources/Images/icons/arrow-left-circle-fill.svg" class="image" alt="" srcset="">
+                                    </button>
+                                </div>
+                                <div class="image-wrapper">
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 0">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 1.png" alt="LRW1" class="image">
+                                        </div>
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 1">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 2.png" alt="LRW1" class="image">
+                                        </div>
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 2">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 3.png" alt="LRW1" class="image">
+                                        </div>
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 3">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 4.png" alt="LRW1" class="image">
+                                        </div>
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 4">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 5.png" alt="LRW1" class="image">
+                                        </div>
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 5">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 6.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 6">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 7.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 7">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 8.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 8">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 9.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 9">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 10.png" alt="LRW1" class="image">
+                                        </div> 
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 10">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 11.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 11">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 12.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 12">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 13.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                    <transition name="pop">
+                                        <div v-show="rebirthImageIndex == 13">
+                                            <img class="rounded-sm" src="resources/Images/instructions/windows/1_Página 14.png" alt="LRW1" class="image">
+                                        </div>  
+                                    </transition>
+                                </div>
+                                <div>
+                                    <button @click="() => {if (rebirthImageIndex < 13) { rebirthImageIndex++ }}">
+                                        <img style="width: 80px; height: 80px;" src="resources/Images/icons/arrow-right-circle-fill.svg" alt="" srcset="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sm:w-full md:w-3/12 text-center">
+                                <div v-show="rebirthImageIndex == 0 && lang == 'es'">
+                                    <p>Si estas en windows oprimé la combinación de teclas Windows + R para abrir la ventana de ejecutar</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 0 && lang == 'en'">
+                                    <p>If you are on windows press the Windows + R key combination to open the run window</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 1 && lang == 'es'">
+                                    <p>En la ventana de ejecutar escribe "%appdata%" y pulsa ok</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 1 && lang == 'en'">
+                                    <p>In the run window type "%appdata%" and press ok</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 2 && lang == 'es'">
+                                    <p>Se te abrirá una carpeta que contenga otra carpeta llamada roaming, abrela.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 2 && lang == 'en'">
+                                    <p>A folder containing another folder called roaming will open, open it.</p>
+                                </div>                            
+                                <div v-show="rebirthImageIndex == 3 && lang == 'es'">
+                                    <p>Si tienes minecraft java instalado te aparecerá una carpeta llamada .minecraft, entra en ella.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 3 && lang == 'en'">
+                                    <p>If you have minecraft java installed a folder called .minecraft will appear, enter it.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 4 && lang == 'es'">
+                                    <div class="text-left">   
+                                        <p>Encontraras dos carpetas: </p>
+                                        <ol>
+                                            <li>• saves</li>
+                                            <li>• resourcepacks</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div v-show="rebirthImageIndex == 4 && lang == 'en'">
+                                    <div class="text-left">   
+                                        <p>You will find two folders: </p>
+                                        <ol>
+                                            <li>• saves</li>
+                                            <li>• resourcepacks</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div v-show="rebirthImageIndex == 5 && lang == 'es'">
+                                    <p>Agrega el archivo de texturas <strong>LR2.textures.zip</strong> dentro de la carpeta <strong>resourcepacks</strong></p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 5 && lang == 'en'">
+                                    <p>Add the texture file <strong>LR2.textures.zip</strong> inside the <strong>resourcepacks</strong> folder</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 6 && lang == 'es'">
+                                    <p>Si entras a la carpeta saves, veras las carpetas que contienen tus mundos.</strong></p>
+                                    <p>Entra al mundo al que quieres instalar el datapack.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 6 && lang == 'en'">
+                                    <p>If you enter the saves folder, you will see the folders that contain your worlds.</strong></p>
+                                    <p>Enter the world where you want to install the datapack.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 7 && lang == 'es'">
+                                    <p>Dentro de la carpeta de tu mundo, abre la carpeta <strong>datapacks</strong></p>
+                                    <p>Y mueve el archivo <strong>littleregressdatapack.zip</strong> dentro de ella.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 7 && lang == 'en'">
+                                    <p>Inside your world's folder, open the <strong>datapacks</strong> folder</p>
+                                    <p>And move the <strong>littleregressdatapack.zip</strong> file inside it.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 8 && lang == 'es'">
+                                    <p>Ya puedes abrir minecraft</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 8 && lang == 'en'">
+                                    <p>You can now open minecraft</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 9 && lang == 'es'">
+                                    <p>Ve a la configuración de paquetes de texturas para activar las texturas del datapack.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 9 && lang == 'en'">
+                                    <p>Go to the texture pack settings to activate the datapack textures.</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 10 && lang == 'es'">
+                                    <p>Activa el paquete de recursos</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 10 && lang == 'en'">
+                                    <p>Activate the resource pack</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 11 && lang == 'es'">
+                                    <p>Te debería aparecer de esta manera</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 11 && lang == 'en'">
+                                    <p>It should appear like this</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 12 && lang == 'es'">
+                                    <p>Ve a abrir el mundo donde instalaste el datapack, recuerde que tiene que ser en la 1.21.5</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 12 && lang == 'en'">
+                                    <p>Go to open the world where you installed the datapack, remember that it has to be in 1.21.5</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 13 && lang == 'es'">
+                                    <p>Al entrar te debería aparecer el mensaje de bienvenida del datapack, en caso que no aparezca, sal y vuelve a entrar el mundo.</p>
+                                    <p>Espero que puedas disfrutar el datapack</p>
+                                </div>
+                                <div v-show="rebirthImageIndex == 13 && lang == 'en'">
+                                    <p>Upon entering, the datapack welcome message should appear; if it does not appear, exit and re-enter the world.</p>
+                                    <p>I hope you can enjoy the datapack</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="h-[300px]">
+
         </div>
     </main>
 
@@ -115,7 +331,9 @@
                     language: navigator.language.substring(0, 2),
                     lang: '',
                     navbarContent: '',
-                    lrSelection: null
+                    lrSelection: null,
+                    showRebirthInstructions: false,
+                    rebirthImageIndex : 0
                 },
                 methods: {
 
