@@ -12,6 +12,7 @@ var vm = new Vue({
         
     },
     mounted() {
+        window.location.href = './../index.html';
         var languaje = navigator.language.substring(0,2);
         if (languaje == 'es') {
             this.lang = 'es';
