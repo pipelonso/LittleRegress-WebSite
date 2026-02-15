@@ -12,6 +12,6 @@ var vm = new Vue({
         }
     },
     mounted() {
-
+        window.location.href = './../index.html';
     }
 });
