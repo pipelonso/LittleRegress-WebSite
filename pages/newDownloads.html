@@ -35,7 +35,33 @@
                     <top-bar :lang="lang"></top-bar>
                 </div>
             </div>
-            <div>
+            <transition name="pop">
+                <div v-if="!acceptAdult">
+                <div class="p-2 ">
+                    <div class="bg-red-400 p-2 text-center text-white rounded-md">
+                        <div class="flex justify-center h-[200px]">
+                            <img src="resources/Images/icons/wet-floor_6790430.png" alt="warning" >
+                        </div>
+                        <div class="mt-2">
+                            <p v-if="lang == 'es'">
+                                Littleregress contiene contenido temático destinado exclusivamente a personas adultas.
+                                Al continuar, confirmas que tienes 18 años o más (o la mayoría de edad legal en tu país) y que accedes bajo tu propia responsabilidad.    
+                            </p>
+                            <p v-else>
+                                Littleregress contains mature content intended exclusively for adults.
+                                By continuing, you confirm that you are 18 years of age or older (or the legal age of majority in your country) and that you are accessing this site at your own risk.
+                            </p>
+                        </div>
+                        <div class="p-2">
+                            <button @click="acceptAdult = true" class="bg-red-700 hover:bg-red-300 hover:text-red-600 text-white rounded-md p-2" v-if="lang == 'es'">Soy mayor de edad y deseo continuar</button>
+                            <button @click="acceptAdult = true" class="bg-red-700 hover:bg-red-300 hover:text-red-600 text-white rounded-md p-2" v-else>I am of legal age and wish to continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </transition>
+            <transition name="pop">
+                <div v-if="acceptAdult">
                 <div class="p-2">
                     <div class="bg-white p-2 rounded-md">
                         <h1 class="text-lg" v-if="lang == 'es'">Descargas</h1>    
@@ -75,7 +101,7 @@
                                             Install instructions
                                         </button>
                                     </template>
-                                    <template v -if="lang == 'es'">
+                                    <template v-if="lang == 'es'">
                                         <button class="bg-green-100 p-2 rounded-md h-full hover:bg-green-200" @click="showRebirthInstructions = !showRebirthInstructions">
                                             Instrucciones de instalación
                                         </button>
@@ -294,6 +320,7 @@
                     </div>
                 </div>
             </div>
+            </transition>
         </div>
         <div class="h-[300px]">
 
@@ -333,7 +360,8 @@
                     navbarContent: '',
                     lrSelection: null,
                     showRebirthInstructions: false,
-                    rebirthImageIndex : 0
+                    rebirthImageIndex : 0,
+                    acceptAdult: false
                 },
                 methods: {
 
